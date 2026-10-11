@@ -11,14 +11,12 @@
             "id": "17513b626727002f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "docs/T1-QA.md",
-                "mode": "source",
-                "source": false
+                "file": "Assets/Blender/CedarCoupe/front-three-quarter.png"
               },
-              "icon": "lucide-file",
-              "title": "T1-QA"
+              "icon": "lucide-image",
+              "title": "front-three-quarter"
             }
           }
         ]
@@ -99,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/T1-QA.md",
+                "file": "Assets/Blender/CedarCoupe/front-three-quarter.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/T1-QA.md",
+                "file": "Assets/Blender/CedarCoupe/front-three-quarter.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/T1-QA.md",
+                "file": "Assets/Blender/CedarCoupe/front-three-quarter.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -190,8 +188,22 @@
   },
   "active": "17513b626727002f",
   "lastOpenFiles": [
-    "CLAUDE_HANDOFF.md",
+    "docs/CURRENT-STATUS.md",
     "coordination/state/mutation.lock",
+    "docs/j1-circuit-review.png",
+    "docs/j1-studio-qa.json",
+    "docs/J1-QA.md",
+    "coordination/state/queue.json.1031370f-940a-4dd9-bbbd-6156c83647aa.tmp",
+    "src/shared/Gen/JapaneseCircuitGenerator.luau",
+    "src/shared/Config/JapaneseCircuitProfiles.luau",
+    "coordination/state/J1-japanese-circuits/claude-progress.md",
+    "Assets/Blender/CedarCoupe/rear-three-quarter.png",
+    "Assets/Blender/CedarCoupe/side.png",
+    "Assets/Blender/CedarCoupe/front-three-quarter.png",
+    "START HERE.md",
+    "CLAUDE_HANDOFF.md",
+    "CODEX_HANDOFF.md",
+    "docs/T1-QA.md",
     "AGENTS.md",
     "Assets/Blender/CedarCoupe/CedarCoupePrototype.rbxm",
     "Design/Cedar Coupe Mechanics Handoff.md",
@@ -199,13 +211,6 @@
     "Assets/Blender/CedarCoupe/prototype_coupe.py",
     "Assets/Blender/CedarCoupe/assemble_cedar.luau",
     "Assets/Blender/CedarCoupe/studio-assembly.json",
-    "Assets/Blender/CedarCoupe/CedarCoupePrototype.rbxmx",
-    "Assets/Blender/CedarCoupe/Cedar_Coupe_Prototype.blend@",
-    "Assets/Blender/CedarCoupe/Cedar_Coupe_BodyShell_R2.mtl",
-    "Assets/Blender/CedarCoupe/Cedar_Coupe_BodyShell_R2.obj",
-    "Assets/Blender/CedarCoupe/side.png",
-    "Assets/Blender/CedarCoupe/rear-three-quarter.png",
-    "Assets/Blender/CedarCoupe/front-three-quarter.png",
     "docs/PHASE0.md",
     "Assets/Blender/Batch01/README.md",
     "Assets/Blender/Batch01/blender-review.png",
@@ -217,18 +222,15 @@
     "Design/References/Attachments/Circuits/Ebisu West photo.jpg",
     "Design/References/Attachments/Circuits/Nikko organizer layout.webp",
     "Design/References/Attachments/Circuits/Ebisu North photo.jpg",
-    "Design/References/Attachments/Circuits/Meihan C 2025 photo.jpg",
     "Design/2026-10-10.md",
     "Design/Project Management.md",
     "Design/Visual Direction.md",
-    "docs/T1-QA.md",
     "Design/Blender Asset Review 01.md",
     "Design/Asset Register.md",
     "CLAUDE.md",
     "Assets/README.md",
     "Design/References/Modeling Detail Board.md",
     "Design/Asset Contract.md",
-    "START HERE.md",
     "README.md",
     "Design/Claude Brief.md",
     "Design/Cars and Upgrades.md",

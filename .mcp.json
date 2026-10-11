@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "car_game_coordination": {
+      "type": "stdio",
+      "args": [
+        "C:\\Users\\super\\OneDrive\\Documents\\Car Game\\coordination\\mcp.mjs"
+      ],
+      "env": {
+        "COORDINATION_STATE_DIR": "C:\\Users\\super\\OneDrive\\Documents\\Car Game\\coordination\\state",
+        "COORDINATION_ROLE": "claude"
+      },
+      "command": "C:\\Program Files\\nodejs\\node.exe"
+    }
+  }
+}
