@@ -1,0 +1,786 @@
+-- Seeded natural mountain heights around a road centerline, as pure data: no Instances and no
+-- Terrain writes. Natural terrain is a basin floor ringed by ridges, built from independent noise
+-- domains. Near the road it is held flat under the asphalt and shoulder, then blended smoothly
+-- back to the natural surface.
+--
+--   local field = MountainHeightfield.new(seed, circuit, TerrainConfig) -- circuit may be nil
+--   local y = MountainHeightfield.heightAt(field, x, z)
+--   local info = MountainHeightfield.sample(field, x, z) -- height, slope, zone, material class
+--
+-- `circuit` is anything shaped like RoadGeometry.build's result: { samples = { { position } },
+-- width }, optionally `closed = false` for an open road. Units follow TerrainConfig (studs).
+--
+-- Cost: new() is O(n * c) for n road samples, c being the grid cells each segment touches (about 4
+-- to 9 with default widths; capped in total by Limits.MaxGridEntries). heightAt() is
+-- O(octaves + k), k being the segments registered in one grid cell. sample() costs five heightAt()
+-- calls (slope by central differences). Nothing yields; builders should batch and yield themselves.
+--
+-- MountainHeightfield.selfTest() is opt-in and never runs on require.
+local DefaultConfig = require(script.Parent.Parent.Config.TerrainConfig)
+
+export type Zone = "Road" | "Shoulder" | "Transition" | "Natural"
+
+export type RoadInput = {
+	samples: { { position: Vector3 } },
+	width: number,
+	closed: boolean?, -- defaults to true: the last sample connects back to the first
+}
+
+export type TerrainSample = {
+	height: number, -- final surface height
+	naturalHeight: number, -- height before road shaping
+	slope: number, -- gradient magnitude, rise over run
+	zone: Zone,
+	blend: number, -- 0 = road corridor height, 1 = natural height
+	roadDistance: number?, -- horizontal distance to the centerline; nil beyond influenceRadius
+	roadHeight: number?, -- road surface height at the closest point on the centerline
+	roadSegment: number?, -- segment i runs from sample i to sample i + 1 (the last wraps to 1 when closed)
+	materialClass: string,
+	material: Enum.Material,
+}
+
+type Domain = { offsetX: number, offsetY: number, offsetZ: number, cos: number, sin: number }
+
+type RoadIndex = {
+	segment: { number },
+	ax: { number },
+	ay: { number },
+	az: { number },
+	dx: { number },
+	dy: { number },
+	dz: { number },
+	inverseLengthSq: { number },
+	cells: { [number]: { number } }, -- keyed lookup only; each list is in ascending segment order
+	cellSize: number,
+	radiusSq: number,
+	minX: number,
+	maxX: number,
+	minZ: number,
+	maxZ: number,
+}
+
+export type Field = {
+	seed: number,
+	version: number,
+	config: any,
+	centerX: number,
+	centerZ: number,
+	hasRoad: boolean,
+	halfWidth: number,
+	corridorEdge: number, -- half width + shoulder: flat out to here
+	influenceRadius: number, -- corridorEdge + MaxTransitionWidth: natural beyond here
+	_domains: { [string]: Domain },
+	_road: RoadIndex?,
+}
+
+local MountainHeightfield = {}
+
+-- Salts come from position in this list: append new domains, never reorder.
+local DOMAIN_NAMES = { "WarpX", "WarpZ", "Ridges", "Hills", "Detail", "Material" }
+local NOISE_SECTIONS = { "Warp", "Ridges", "Hills", "Detail", "Material" }
+local MATERIAL_CLASSES = { "RoadBed", "Shoulder", "Embankment", "Rock", "Meadow", "Forest" }
+
+local TWO_32 = 4294967296
+local MAX_SEED = 2 ^ 53
+local MAX_OCTAVES = 8
+local OFFSET_RANGE = 1024 -- noise-space offset per domain; small enough to keep math.noise precise
+local OCTAVE_SHIFT = 19.137 -- decorrelates octaves of one domain
+local KEY_STRIDE = 2 ^ 24 -- grid key = cellX * stride + cellZ, valid while |cell| < 2^23
+local MIN_SEGMENT_LENGTH_SQ = 1e-8
+local BLEND_PEAK_SLOPE = 1.875 -- largest derivative of smootherstep over [0, 1]
+
+local function fail(message: string): never
+	error("MountainHeightfield: " .. message, 0)
+end
+
+local function isFinite(value: any): boolean
+	return type(value) == "number" and value == value and value > -math.huge and value < math.huge
+end
+
+local function requireFinite(value: any, name: string)
+	if not isFinite(value) then
+		fail(string.format("%s must be a finite number, got %s", name, tostring(value)))
+	end
+end
+
+local function requirePositive(value: any, name: string)
+	requireFinite(value, name)
+	if value <= 0 then
+		fail(string.format("%s must be positive, got %s", name, tostring(value)))
+	end
+end
+
+local function requireRange(value: any, name: string, min: number, max: number)
+	requireFinite(value, name)
+	if value < min or value > max then
+		fail(string.format("%s must be between %s and %s, got %s", name, tostring(min), tostring(max), tostring(value)))
+	end
+end
+
+local function requireInteger(value: any, name: string, min: number, max: number)
+	requireRange(value, name, min, max)
+	if value % 1 ~= 0 then
+		fail(string.format("%s must be an integer, got %s", name, tostring(value)))
+	end
+end
+
+local function requireTable(value: any, name: string): any
+	if type(value) ~= "table" then
+		fail(name .. " must be a table")
+	end
+	return value
+end
+
+local function validateConfig(config: any)
+	requireTable(config, "config")
+	requireInteger(config.GeneratorVersion, "GeneratorVersion", 0, TWO_32 - 1)
+
+	local basin = requireTable(config.Basin, "Basin")
+	requireFinite(basin.FloorHeight, "Basin.FloorHeight")
+	requirePositive(basin.FloorRadius, "Basin.FloorRadius")
+	requireFinite(basin.RidgeRadius, "Basin.RidgeRadius")
+	if basin.RidgeRadius <= basin.FloorRadius then
+		fail("Basin.RidgeRadius must be greater than Basin.FloorRadius")
+	end
+	requireRange(basin.RidgeHeight, "Basin.RidgeHeight", 0, math.huge)
+	if basin.CenterX ~= nil then
+		requireFinite(basin.CenterX, "Basin.CenterX")
+	end
+	if basin.CenterZ ~= nil then
+		requireFinite(basin.CenterZ, "Basin.CenterZ")
+	end
+
+	local noise = requireTable(config.Noise, "Noise")
+	for i = 1, #NOISE_SECTIONS do
+		local name = "Noise." .. NOISE_SECTIONS[i]
+		local settings = requireTable(noise[NOISE_SECTIONS[i]], name)
+		requirePositive(settings.Frequency, name .. ".Frequency")
+		requireRange(settings.Amplitude, name .. ".Amplitude", 0, math.huge)
+		requireInteger(settings.Octaves, name .. ".Octaves", 1, MAX_OCTAVES)
+		requireRange(settings.Lacunarity, name .. ".Lacunarity", 1, 8)
+		requireRange(settings.Gain, name .. ".Gain", 0.01, 1)
+	end
+	requireInteger(noise.Ridges.Sharpness, "Noise.Ridges.Sharpness", 1, 4)
+	requireRange(noise.Ridges.BasinScale, "Noise.Ridges.BasinScale", 0, 1)
+
+	local road = requireTable(config.Road, "Road")
+	requirePositive(road.Clearance, "Road.Clearance")
+	requirePositive(road.ShoulderWidth, "Road.ShoulderWidth")
+	requirePositive(road.TransitionWidth, "Road.TransitionWidth")
+	requireFinite(road.MaxTransitionWidth, "Road.MaxTransitionWidth")
+	if road.MaxTransitionWidth < road.TransitionWidth then
+		fail("Road.MaxTransitionWidth must be at least Road.TransitionWidth")
+	end
+	requirePositive(road.EmbankmentSlope, "Road.EmbankmentSlope")
+
+	local materials = requireTable(config.Materials, "Materials")
+	requirePositive(materials.SlopeStep, "Materials.SlopeStep")
+	requirePositive(materials.RockSlope, "Materials.RockSlope")
+	if materials.RockSlope <= noise.Material.Amplitude then
+		fail("Materials.RockSlope must exceed Noise.Material.Amplitude")
+	end
+	requireRange(materials.MeadowSlope, "Materials.MeadowSlope", 0, math.huge)
+	requireFinite(materials.MeadowMaxAboveFloor, "Materials.MeadowMaxAboveFloor")
+	local terrain = requireTable(materials.Terrain, "Materials.Terrain")
+	for i = 1, #MATERIAL_CLASSES do
+		if typeof(terrain[MATERIAL_CLASSES[i]]) ~= "EnumItem" then
+			fail("Materials.Terrain." .. MATERIAL_CLASSES[i] .. " must be an Enum.Material")
+		end
+	end
+
+	local limits = requireTable(config.Limits, "Limits")
+	requireInteger(limits.MaxRoadSamples, "Limits.MaxRoadSamples", 2, 1e6)
+	requirePositive(limits.MaxCoordinate, "Limits.MaxCoordinate")
+	requireInteger(limits.MaxGridEntries, "Limits.MaxGridEntries", 1, 1e8)
+end
+
+-- Seed derivation: xorshift32 rounds over the seed's low and high 32 bits, the generator version
+-- and a per-domain salt. Every step is invertible, so different seeds give different domain seeds.
+local function mix(state: number, value: number): number
+	local h = bit32.bxor(state, value)
+	for _ = 1, 3 do
+		h = bit32.bxor(h, bit32.lshift(h, 13))
+		h = bit32.bxor(h, bit32.rshift(h, 17))
+		h = bit32.bxor(h, bit32.lshift(h, 5))
+	end
+	return h
+end
+
+local function makeDomain(seed: number, version: number, salt: number): Domain
+	local h = mix(2166136261, seed % TWO_32)
+	h = mix(h, math.floor(seed / TWO_32) % TWO_32)
+	h = mix(h, version)
+	local rng = Random.new(mix(h, salt))
+	local angle = rng:NextNumber(0, 2 * math.pi)
+	return {
+		offsetX = rng:NextNumber(-OFFSET_RANGE, OFFSET_RANGE),
+		offsetY = rng:NextNumber(-OFFSET_RANGE, OFFSET_RANGE),
+		offsetZ = rng:NextNumber(-OFFSET_RANGE, OFFSET_RANGE),
+		cos = math.cos(angle),
+		sin = math.sin(angle),
+	}
+end
+
+local function smootherstep(t: number): number
+	return t * t * t * (t * (t * 6 - 15) + 10)
+end
+
+-- Normalized fractal noise in [-1, 1], or [0, 1] when ridged (sharp crests where noise crosses zero).
+local function fractal(domain: Domain, settings: any, x: number, z: number, ridged: boolean): number
+	local u = (x * domain.cos - z * domain.sin) * settings.Frequency
+	local v = (x * domain.sin + z * domain.cos) * settings.Frequency
+	local total, norm, weight, scale = 0, 0, 1, 1
+	for octave = 1, settings.Octaves do
+		local n = math.noise(
+			u * scale + domain.offsetX + octave * OCTAVE_SHIFT,
+			v * scale + domain.offsetZ - octave * OCTAVE_SHIFT,
+			domain.offsetY
+		)
+		n = math.clamp(n, -1, 1)
+		if ridged then
+			local crease = math.clamp(1 - 2 * math.abs(n), 0, 1)
+			n = crease
+			for _ = 2, settings.Sharpness do
+				n *= crease
+			end
+		end
+		total += n * weight
+		norm += weight
+		weight *= settings.Gain
+		scale *= settings.Lacunarity
+	end
+	return total / norm
+end
+
+local function naturalHeight(field: Field, x: number, z: number): number
+	local noise = field.config.Noise
+	local basin = field.config.Basin
+	local domains = field._domains
+	local warp = noise.Warp
+	local px = x + fractal(domains.WarpX, warp, x, z, false) * warp.Amplitude
+	local pz = z + fractal(domains.WarpZ, warp, x, z, false) * warp.Amplitude
+
+	local ox, oz = px - field.centerX, pz - field.centerZ
+	local ringT = (math.sqrt(ox * ox + oz * oz) - basin.FloorRadius) / (basin.RidgeRadius - basin.FloorRadius)
+	local ring = smootherstep(math.clamp(ringT, 0, 1))
+
+	local ridges = noise.Ridges
+	local ridgeAmplitude = ridges.Amplitude * (ridges.BasinScale + (1 - ridges.BasinScale) * ring)
+	return basin.FloorHeight
+		+ ring * basin.RidgeHeight
+		+ fractal(domains.Ridges, ridges, px, pz, true) * ridgeAmplitude
+		+ fractal(domains.Hills, noise.Hills, px, pz, false) * noise.Hills.Amplitude
+		+ fractal(domains.Detail, noise.Detail, x, z, false) * noise.Detail.Amplitude
+end
+
+-- Validates the road and builds a uniform grid of horizontal segments. Cell size equals the
+-- influence radius, so every segment within that radius of a point is listed in the point's cell.
+local function buildRoadIndex(road: any, limits: any, radius: number): (RoadIndex, number, number)
+	local samples = road.samples
+	if type(samples) ~= "table" then
+		fail("road.samples must be an array of { position: Vector3 }")
+	end
+	local count = #samples
+	if count < 2 then
+		fail(string.format("road needs at least 2 samples, got %d", count))
+	end
+	if count > limits.MaxRoadSamples then
+		fail(string.format("road has %d samples, more than Limits.MaxRoadSamples (%d)", count, limits.MaxRoadSamples))
+	end
+	local closed = road.closed
+	if closed == nil then
+		closed = true
+	elseif type(closed) ~= "boolean" then
+		fail("road.closed must be a boolean or nil")
+	end
+
+	local maxCoordinate = limits.MaxCoordinate
+	if (maxCoordinate + radius) / radius + 2 >= KEY_STRIDE / 2 then
+		fail("Limits.MaxCoordinate is too large for the road influence radius")
+	end
+
+	local points = table.create(count)
+	local sumX, sumZ = 0, 0
+	for i = 1, count do
+		local sample = samples[i]
+		local position = if type(sample) == "table" then sample.position else nil
+		if typeof(position) ~= "Vector3" then
+			fail(string.format("road.samples[%d].position must be a Vector3", i))
+		end
+		if not (isFinite(position.X) and isFinite(position.Y) and isFinite(position.Z)) then
+			fail(string.format("road.samples[%d].position is not finite", i))
+		end
+		if math.abs(position.X) > maxCoordinate or math.abs(position.Z) > maxCoordinate then
+			fail(string.format("road.samples[%d].position is beyond Limits.MaxCoordinate", i))
+		end
+		points[i] = position
+		sumX += position.X
+		sumZ += position.Z
+	end
+
+	local segmentCount = if closed then count else count - 1
+	local index: RoadIndex = {
+		segment = table.create(segmentCount),
+		ax = table.create(segmentCount),
+		ay = table.create(segmentCount),
+		az = table.create(segmentCount),
+		dx = table.create(segmentCount),
+		dy = table.create(segmentCount),
+		dz = table.create(segmentCount),
+		inverseLengthSq = table.create(segmentCount),
+		cells = {},
+		cellSize = radius,
+		radiusSq = radius * radius,
+		minX = math.huge,
+		maxX = -math.huge,
+		minZ = math.huge,
+		maxZ = -math.huge,
+	}
+
+	local kept, entries = 0, 0
+	for s = 1, segmentCount do
+		local a = points[s]
+		local b = points[s % count + 1]
+		local dx, dz = b.X - a.X, b.Z - a.Z
+		local lengthSq = dx * dx + dz * dz
+		-- Segments with no horizontal extent add nothing a neighbor does not already cover.
+		if lengthSq > MIN_SEGMENT_LENGTH_SQ then
+			kept += 1
+			index.segment[kept] = s
+			index.ax[kept], index.ay[kept], index.az[kept] = a.X, a.Y, a.Z
+			index.dx[kept], index.dy[kept], index.dz[kept] = dx, b.Y - a.Y, dz
+			index.inverseLengthSq[kept] = 1 / lengthSq
+
+			local x0, x1 = math.min(a.X, b.X) - radius, math.max(a.X, b.X) + radius
+			local z0, z1 = math.min(a.Z, b.Z) - radius, math.max(a.Z, b.Z) + radius
+			index.minX, index.maxX = math.min(index.minX, x0), math.max(index.maxX, x1)
+			index.minZ, index.maxZ = math.min(index.minZ, z0), math.max(index.maxZ, z1)
+
+			local cx0, cx1 = math.floor(x0 / radius), math.floor(x1 / radius)
+			local cz0, cz1 = math.floor(z0 / radius), math.floor(z1 / radius)
+			entries += (cx1 - cx0 + 1) * (cz1 - cz0 + 1)
+			if entries > limits.MaxGridEntries then
+				fail("road lookup grid exceeds Limits.MaxGridEntries; road samples are too sparse or too many")
+			end
+			for cx = cx0, cx1 do
+				for cz = cz0, cz1 do
+					local key = cx * KEY_STRIDE + cz
+					local list = index.cells[key]
+					if list == nil then
+						list = {}
+						index.cells[key] = list
+					end
+					table.insert(list, kept)
+				end
+			end
+		end
+	end
+	if kept == 0 then
+		fail("road is degenerate: every centerline segment has zero horizontal length")
+	end
+
+	return index, sumX / count, sumZ / count
+end
+
+-- Closest point on any centerline segment (horizontal distance), with the road surface height
+-- interpolated along that segment. Returns nil beyond the influence radius. Ties keep the lowest
+-- segment, so results never depend on table order.
+local function nearestRoad(index: RoadIndex, x: number, z: number): (number?, number?, number?)
+	if x < index.minX or x > index.maxX or z < index.minZ or z > index.maxZ then
+		return nil, nil, nil
+	end
+	local list = index.cells[math.floor(x / index.cellSize) * KEY_STRIDE + math.floor(z / index.cellSize)]
+	if list == nil then
+		return nil, nil, nil
+	end
+
+	local bestSq, bestK, bestT = math.huge, 0, 0
+	for i = 1, #list do
+		local k = list[i]
+		local px, pz = x - index.ax[k], z - index.az[k]
+		local dx, dz = index.dx[k], index.dz[k]
+		local t = math.clamp((px * dx + pz * dz) * index.inverseLengthSq[k], 0, 1)
+		local ex, ez = px - dx * t, pz - dz * t
+		local distanceSq = ex * ex + ez * ez
+		if distanceSq < bestSq then
+			bestSq, bestK, bestT = distanceSq, k, t
+		end
+	end
+	if bestSq > index.radiusSq then
+		return nil, nil, nil
+	end
+	return math.sqrt(bestSq), index.ay[bestK] + index.dy[bestK] * bestT, index.segment[bestK]
+end
+
+-- height, natural height, road distance, road height, road segment, blend.
+local function evaluate(field: Field, x: number, z: number): (number, number, number?, number?, number?, number)
+	local natural = naturalHeight(field, x, z)
+	local index = field._road
+	if index == nil then
+		return natural, natural, nil, nil, nil, 1
+	end
+	local distance, roadY, segment = nearestRoad(index, x, z)
+	if distance == nil or roadY == nil then
+		return natural, natural, nil, nil, nil, 1
+	end
+
+	local road = field.config.Road
+	local corridor = roadY - road.Clearance
+	if distance <= field.corridorEdge then
+		return corridor, natural, distance, roadY, segment, 0
+	end
+	-- Wider blends for bigger cuts and fills, so the peak slope stays near EmbankmentSlope.
+	local width = math.clamp(
+		BLEND_PEAK_SLOPE * math.abs(natural - corridor) / road.EmbankmentSlope,
+		road.TransitionWidth,
+		road.MaxTransitionWidth
+	)
+	local t = (distance - field.corridorEdge) / width
+	if t >= 1 then
+		return natural, natural, distance, roadY, segment, 1
+	end
+	local blend = smootherstep(t)
+	return corridor + (natural - corridor) * blend, natural, distance, roadY, segment, blend
+end
+
+local function requireQuery(field: Field, x: any, z: any)
+	requireFinite(x, "x")
+	requireFinite(z, "z")
+	local limit = field.config.Limits.MaxCoordinate
+	if math.abs(x) > limit or math.abs(z) > limit then
+		fail(string.format("query (%s, %s) is beyond Limits.MaxCoordinate", tostring(x), tostring(z)))
+	end
+end
+
+local function requireFiniteResult(value: number, x: number, z: number): number
+	if not isFinite(value) then
+		fail(string.format("non-finite height at (%s, %s); check the configuration", tostring(x), tostring(z)))
+	end
+	return value
+end
+
+local function classify(field: Field, zone: Zone, x: number, z: number, height: number, slope: number): string
+	if zone == "Road" then
+		return "RoadBed"
+	elseif zone == "Shoulder" then
+		return "Shoulder"
+	end
+	local config = field.config
+	local materials = config.Materials
+	local jitter = fractal(field._domains.Material, config.Noise.Material, x, z, false) * config.Noise.Material.Amplitude
+	if slope >= materials.RockSlope + jitter then
+		return "Rock"
+	elseif zone == "Transition" then
+		return "Embankment"
+	elseif slope <= materials.MeadowSlope and height <= config.Basin.FloorHeight + materials.MeadowMaxAboveFloor then
+		return "Meadow"
+	end
+	return "Forest"
+end
+
+-- seed: integer with |seed| <= 2^53. road: RoadInput or nil for natural terrain only.
+-- config: defaults to TerrainConfig. Errors with a clear message on any invalid input.
+function MountainHeightfield.new(seed: number, road: RoadInput?, config: any?): Field
+	local resolved = if config == nil then DefaultConfig else config
+	if not isFinite(seed) or seed % 1 ~= 0 or math.abs(seed) > MAX_SEED then
+		fail(string.format("seed must be a finite integer with magnitude at most 2^53, got %s", tostring(seed)))
+	end
+	validateConfig(resolved)
+
+	local domains = {}
+	for salt = 1, #DOMAIN_NAMES do
+		domains[DOMAIN_NAMES[salt]] = makeDomain(seed, resolved.GeneratorVersion, salt)
+	end
+
+	local field: Field = {
+		seed = seed,
+		version = resolved.GeneratorVersion,
+		config = resolved,
+		centerX = 0,
+		centerZ = 0,
+		hasRoad = false,
+		halfWidth = 0,
+		corridorEdge = 0,
+		influenceRadius = 0,
+		_domains = domains,
+		_road = nil,
+	}
+
+	if road ~= nil then
+		requireTable(road, "road")
+		requirePositive(road.width, "road.width")
+		field.halfWidth = road.width / 2
+		field.corridorEdge = field.halfWidth + resolved.Road.ShoulderWidth
+		field.influenceRadius = field.corridorEdge + resolved.Road.MaxTransitionWidth
+		local index, centroidX, centroidZ = buildRoadIndex(road, resolved.Limits, field.influenceRadius)
+		field._road = index
+		field.hasRoad = true
+		field.centerX, field.centerZ = centroidX, centroidZ
+	end
+	local basin = resolved.Basin
+	if basin.CenterX ~= nil then
+		field.centerX = basin.CenterX
+	end
+	if basin.CenterZ ~= nil then
+		field.centerZ = basin.CenterZ
+	end
+	return field
+end
+
+-- Final terrain surface height in studs at world (x, z).
+function MountainHeightfield.heightAt(field: Field, x: number, z: number): number
+	requireQuery(field, x, z)
+	return requireFiniteResult((evaluate(field, x, z)), x, z)
+end
+
+-- Height before any road shaping.
+function MountainHeightfield.naturalHeightAt(field: Field, x: number, z: number): number
+	requireQuery(field, x, z)
+	return requireFiniteResult(naturalHeight(field, x, z), x, z)
+end
+
+function MountainHeightfield.sample(field: Field, x: number, z: number): TerrainSample
+	requireQuery(field, x, z)
+	local height, natural, distance, roadY, segment, blend = evaluate(field, x, z)
+	requireFiniteResult(height, x, z)
+
+	local step = field.config.Materials.SlopeStep
+	local gx = ((evaluate(field, x + step, z)) - (evaluate(field, x - step, z))) / (2 * step)
+	local gz = ((evaluate(field, x, z + step)) - (evaluate(field, x, z - step))) / (2 * step)
+	local slope = requireFiniteResult(math.sqrt(gx * gx + gz * gz), x, z)
+
+	local zone: Zone = "Natural"
+	if distance ~= nil then
+		if distance <= field.halfWidth then
+			zone = "Road"
+		elseif distance <= field.corridorEdge then
+			zone = "Shoulder"
+		elseif blend < 1 then
+			zone = "Transition"
+		end
+	end
+
+	local materialClass = classify(field, zone, x, z, height, slope)
+	return {
+		height = height,
+		naturalHeight = natural,
+		slope = slope,
+		zone = zone,
+		blend = blend,
+		roadDistance = distance,
+		roadHeight = roadY,
+		roadSegment = segment,
+		materialClass = materialClass,
+		material = field.config.Materials.Terrain[materialClass],
+	}
+end
+
+-- Opt-in checks; call from the Studio command bar. Returns (passed, report lines). Never prints.
+function MountainHeightfield.selfTest(): (boolean, { string })
+	local lines = {}
+	local failures = 0
+	local function check(name: string, ok: boolean, detail: string?)
+		if not ok then
+			failures += 1
+		end
+		table.insert(lines, (if ok then "PASS " else "FAIL ") .. name .. (if detail then " (" .. detail .. ")" else ""))
+	end
+	local function expectError(name: string, fn: () -> ())
+		local ok = pcall(fn)
+		check("rejects " .. name, not ok, if ok then "no error raised" else nil)
+	end
+	local function near(a: number?, b: number, tolerance: number?): boolean
+		return a ~= nil and math.abs(a - b) <= (tolerance or 1e-4)
+	end
+	local function point(x: number, y: number, z: number)
+		return { position = Vector3.new(x, y, z) }
+	end
+	local function withSetting(section: string, key: string, value: any): any
+		local copy = table.clone(DefaultConfig)
+		copy[section] = table.clone(DefaultConfig[section])
+		copy[section][key] = value
+		return copy
+	end
+
+	local new, heightAt, sample = MountainHeightfield.new, MountainHeightfield.heightAt, MountainHeightfield.sample
+	local clearance = DefaultConfig.Road.Clearance
+
+	local ran, err = pcall(function()
+		-- Repeatability, seeds and negative coordinates.
+		local probes = {
+			{ 0, 0 },
+			{ 137.25, -52.5 },
+			{ -1234.5, -987.25 },
+			{ -0.5, -0.5 },
+			{ 2500, -3100 },
+			{ -40000, 35000 },
+			{ 611.1, 611.1 },
+			{ -77, 903 },
+		}
+		local a, b = new(12345, nil), new(12345, nil)
+		local other, negative = new(12346, nil), new(-12345, nil)
+		local repeatable, finite, differs, differsNegative = true, true, 0, 0
+		for i = 1, #probes do
+			local x, z = probes[i][1], probes[i][2]
+			local h = heightAt(a, x, z)
+			if h ~= heightAt(b, x, z) or h ~= heightAt(a, x, z) then
+				repeatable = false
+			end
+			finite = finite and isFinite(h)
+			if math.abs(h - heightAt(other, x, z)) > 0.01 then
+				differs += 1
+			end
+			if math.abs(h - heightAt(negative, x, z)) > 0.01 then
+				differsNegative += 1
+			end
+		end
+		check("same seed repeats exactly", repeatable)
+		check("heights finite at negative and far coordinates", finite)
+		check("adjacent seed changes heights", differs >= #probes - 1, string.format("%d/%d differ", differs, #probes))
+		check("negated seed changes heights", differsNegative >= #probes - 1, string.format("%d/%d differ", differsNegative, #probes))
+		check(
+			"noise domains are independent",
+			a._domains.WarpX.offsetX ~= a._domains.WarpZ.offsetX and a._domains.Hills.offsetX ~= other._domains.Hills.offsetX
+		)
+		check("negative coordinates are not mirrored", heightAt(a, -1234.5, -987.25) ~= heightAt(a, 1234.5, 987.25))
+
+		-- Road clearance with elevation interpolated between samples, not taken from the nearest sample.
+		local sloped = new(7, { width = 30, closed = false, samples = { point(0, 0, 0), point(100, 20, 0), point(200, 20, 0) } })
+		local mid = sample(sloped, 50, 5)
+		check(
+			"interpolated road elevation under asphalt",
+			mid.zone == "Road" and near(mid.roadHeight, 10) and near(mid.height, 10 - clearance) and mid.roadSegment == 1,
+			string.format("zone %s, road %s, height %.4f", mid.zone, tostring(mid.roadHeight), mid.height)
+		)
+
+		-- Wraparound: the closing segment from the last sample back to the first.
+		local loop = { point(0, 0, 0), point(400, 0, 0), point(400, 0, 400), point(0, 8, 400) }
+		local closedLoop = new(7, { width = 30, samples = loop })
+		local wrap = sample(closedLoop, -5, 200)
+		check(
+			"wraparound segment is used",
+			wrap.zone == "Road" and wrap.roadSegment == 4 and near(wrap.roadHeight, 4) and near(wrap.height, 4 - clearance),
+			string.format("zone %s, segment %s, height %.4f", wrap.zone, tostring(wrap.roadSegment), wrap.height)
+		)
+		local openLoop = new(7, { width = 30, closed = false, samples = loop })
+		check("open road has no wraparound segment", sample(openLoop, -5, 200).zone == "Natural")
+
+		-- Blend boundaries on a level straight road at Y 10, measured outward along Z from x = 0.
+		local straight = new(7, { width = 30, closed = false, samples = { point(-400, 10, 0), point(0, 10, 0), point(400, 10, 0) } })
+		local corridor = 10 - clearance
+		local edge, radius = straight.corridorEdge, straight.influenceRadius
+		check("edge of asphalt is Road", sample(straight, 0, 14.9).zone == "Road")
+		check("just past asphalt is Shoulder", sample(straight, 0, 15.1).zone == "Shoulder")
+		local atEdge = sample(straight, 0, edge)
+		check("shoulder edge holds corridor height", atEdge.zone == "Shoulder" and near(atEdge.height, corridor))
+		local justOut = sample(straight, 0, edge + 0.01)
+		check("blend starts continuously", near(justOut.height, corridor, 0.01), string.format("height %.4f", justOut.height))
+		local beyond = sample(straight, 0, radius + 1)
+		check(
+			"beyond influence radius is natural",
+			beyond.zone == "Natural" and beyond.roadDistance == nil and beyond.height == beyond.naturalHeight
+		)
+
+		local bounded, continuous, belowRoad = true, true, true
+		local previous = heightAt(straight, 0, 0)
+		for step = 1, 520 do
+			local z = step * 0.25
+			local s = sample(straight, 0, z)
+			local low, high = math.min(corridor, s.naturalHeight), math.max(corridor, s.naturalHeight)
+			if s.height < low - 1e-6 or s.height > high + 1e-6 then
+				bounded = false
+			end
+			if math.abs(s.height - previous) > 0.25 * 6 then
+				continuous = false
+			end
+			if z <= edge and s.height >= 10 then
+				belowRoad = false
+			end
+			previous = s.height
+		end
+		check("corridor stays below the road surface", belowRoad)
+		check("blend stays between corridor and natural heights", bounded)
+		check("blend has no jumps", continuous)
+
+		-- Invalid input.
+		expectError("NaN seed", function()
+			new(0 / 0, nil)
+		end)
+		expectError("infinite seed", function()
+			new(math.huge, nil)
+		end)
+		expectError("fractional seed", function()
+			new(1.5, nil)
+		end)
+		expectError("string seed", function()
+			new("1" :: any, nil)
+		end)
+		expectError("zero road width", function()
+			new(1, { width = 0, samples = loop })
+		end)
+		expectError("negative road width", function()
+			new(1, { width = -5, samples = loop })
+		end)
+		expectError("NaN road width", function()
+			new(1, { width = 0 / 0, samples = loop })
+		end)
+		expectError("missing samples", function()
+			new(1, { width = 30 } :: any)
+		end)
+		expectError("single sample", function()
+			new(1, { width = 30, samples = { point(0, 0, 0) } })
+		end)
+		expectError("non-finite sample", function()
+			new(1, { width = 30, samples = { point(0, 0, 0), point(0 / 0, 0, 10) } })
+		end)
+		expectError("degenerate road", function()
+			new(1, { width = 30, samples = { point(5, 0, 5), point(5, 3, 5), point(5, 0, 5) } })
+		end)
+		expectError("zero shoulder width", function()
+			new(1, nil, withSetting("Road", "ShoulderWidth", 0))
+		end)
+		expectError("negative transition width", function()
+			new(1, nil, withSetting("Road", "TransitionWidth", -1))
+		end)
+		expectError("zero clearance", function()
+			new(1, nil, withSetting("Road", "Clearance", 0))
+		end)
+		expectError("NaN query", function()
+			heightAt(a, 0 / 0, 0)
+		end)
+		expectError("infinite query", function()
+			sample(a, 0, math.huge)
+		end)
+		expectError("query beyond MaxCoordinate", function()
+			heightAt(a, DefaultConfig.Limits.MaxCoordinate + 1, 0)
+		end)
+
+		-- Finite results and known classes across a wide grid around the closed loop.
+		local allFinite, knownClasses = true, true
+		for gx = -24, 24 do
+			for gz = -24, 24 do
+				local s = sample(closedLoop, gx * 125, gz * 125)
+				if not (isFinite(s.height) and isFinite(s.naturalHeight) and isFinite(s.slope) and isFinite(s.blend)) then
+					allFinite = false
+				end
+				if typeof(s.material) ~= "EnumItem" then
+					knownClasses = false
+				end
+			end
+		end
+		local limit = DefaultConfig.Limits.MaxCoordinate
+		for _, corner in { { limit, limit }, { -limit, -limit }, { -limit, limit } } do
+			allFinite = allFinite and isFinite(heightAt(a, corner[1], corner[2]))
+		end
+		check("sample fields finite across the map and at limits", allFinite)
+		check("every sample has a material class", knownClasses)
+	end)
+	if not ran then
+		check("selfTest completed without an unexpected error", false, tostring(err))
+	end
+
+	table.insert(lines, string.format("%s: %d failure(s)", if failures == 0 then "PASSED" else "FAILED", failures))
+	return failures == 0, lines
+end
+
+return MountainHeightfield

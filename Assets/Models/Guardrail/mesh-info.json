@@ -1,0 +1,25 @@
+{
+  "name": "Mountain_Guardrail_12",
+  "triangles": 932,
+  "bounds": [
+    [
+      -6.0,
+      0.0,
+      -0.43
+    ],
+    [
+      6.0,
+      3.2,
+      0.33
+    ]
+  ],
+  "axis": "Y up, X module length",
+  "pivot": [
+    0,
+    0,
+    0
+  ],
+  "status": "candidate; Studio import pending",
+  "source": "original procedural mesh authoring",
+  "reference": "Design/References/Modeling Detail Board.md R09"
+}

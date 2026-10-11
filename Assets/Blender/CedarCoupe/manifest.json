@@ -1,0 +1,1238 @@
+{
+  "status": "Blender and Studio assembly verified; gameplay integration pending",
+  "units": "1 Blender unit = 1 Roblox stud; import unit Stud",
+  "coordinate_mapping": "Roblox (x,y,z) = Blender (x,z,-y)",
+  "root": "ChassisRoot at origin; front Roblox -Z",
+  "chassis_size_studs": [
+    6.4,
+    1.6,
+    14
+  ],
+  "wheel_radius": 1.4,
+  "wheel_width": 1.3,
+  "wheel_mounts_roblox": {
+    "FL": [
+      -2.9,
+      -0.6,
+      -4.7
+    ],
+    "FR": [
+      2.9,
+      -0.6,
+      -4.7
+    ],
+    "RL": [
+      -2.9,
+      -0.6,
+      4.5
+    ],
+    "RR": [
+      2.9,
+      -0.6,
+      4.5
+    ]
+  },
+  "export_wheel_spring_length": 2.2,
+  "anchors_roblox": {
+    "ChassisRoot": [
+      0,
+      0,
+      0
+    ],
+    "DriverSeat": [
+      1.45,
+      0.65,
+      0.8
+    ],
+    "CameraTarget": [
+      0,
+      1.3,
+      0
+    ],
+    "EngineAudio": [
+      0,
+      0.4,
+      -4.0
+    ],
+    "ExhaustAudio": [
+      0,
+      -0.5,
+      7.3
+    ],
+    "SteeringPivot": [
+      1.45,
+      1.2,
+      -1.26
+    ],
+    "GearLeverPivot": [
+      0,
+      0.4,
+      -0.52
+    ],
+    "HandbrakePivot": [
+      0.33,
+      0.55,
+      0.62
+    ],
+    "Suspension_FL": [
+      -2.9,
+      -0.6,
+      -4.7
+    ],
+    "Suspension_FR": [
+      2.9,
+      -0.6,
+      -4.7
+    ],
+    "Suspension_RL": [
+      -2.9,
+      -0.6,
+      4.5
+    ],
+    "Suspension_RR": [
+      2.9,
+      -0.6,
+      4.5
+    ]
+  },
+  "mesh_audit": [
+    {
+      "name": "BodyShell",
+      "triangles": 4172,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        7.0,
+        15.0,
+        2.049999952316284
+      ]
+    },
+    {
+      "name": "RoofPanel",
+      "triangles": 508,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        5.179999828338623,
+        3.9000000953674316,
+        0.267345666885376
+      ]
+    },
+    {
+      "name": "Windshield",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        6.1900153160095215,
+        1.7000000476837158,
+        1.3030000925064087
+      ]
+    },
+    {
+      "name": "RearGlass",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        6.18740177154541,
+        1.3500001430511475,
+        1.2816635370254517
+      ]
+    },
+    {
+      "name": "SideGlass_L",
+      "triangles": 92,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        0.7297995090484619,
+        5.437944412231445,
+        1.1907217502593994
+      ]
+    },
+    {
+      "name": "APillar_L",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        0.7401638031005859,
+        1.6999999284744263,
+        1.4280633926391602
+      ]
+    },
+    {
+      "name": "CPillar_L",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        0.8073995113372803,
+        1.3700001239776611,
+        1.4081602096557617
+      ]
+    },
+    {
+      "name": "B_Pillar_L",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        0.7100000381469727,
+        0.12999999523162842,
+        1.2137011289596558
+      ]
+    },
+    {
+      "name": "RearQuarter_L",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        0.7755904197692871,
+        1.4860146045684814,
+        1.3067314624786377
+      ]
+    },
+    {
+      "name": "DoorHandle_L",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -3.4000000953674316,
+        -0.800000011920929,
+        0.6100000143051147
+      ],
+      "dimensions_blender": [
+        0.07000000029802322,
+        0.46000000834465027,
+        0.10000000149011612
+      ]
+    },
+    {
+      "name": "Mirror_L",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -3.5999999046325684,
+        1.9299999475479126,
+        1.2000000476837158
+      ],
+      "dimensions_blender": [
+        0.5199999809265137,
+        0.6499999761581421,
+        0.2800000011920929
+      ]
+    },
+    {
+      "name": "MirrorGlass_L",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -3.609999895095825,
+        1.6299999952316284,
+        1.2100000381469727
+      ],
+      "dimensions_blender": [
+        0.3799999952316284,
+        0.02500000037252903,
+        0.1899999976158142
+      ]
+    },
+    {
+      "name": "Sill_L",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -3.369999885559082,
+        0.0,
+        -0.7900000214576721
+      ],
+      "dimensions_blender": [
+        0.18000000715255737,
+        5.349999904632568,
+        0.2199999988079071
+      ]
+    },
+    {
+      "name": "SideGlass_R",
+      "triangles": 92,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        0.729799747467041,
+        5.437944412231445,
+        1.1907217502593994
+      ]
+    },
+    {
+      "name": "APillar_R",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        0.7401638031005859,
+        1.6999999284744263,
+        1.4280633926391602
+      ]
+    },
+    {
+      "name": "CPillar_R",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        0.8073995113372803,
+        1.3700001239776611,
+        1.4081604480743408
+      ]
+    },
+    {
+      "name": "B_Pillar_R",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        0.7100000381469727,
+        0.12999999523162842,
+        1.2137011289596558
+      ]
+    },
+    {
+      "name": "RearQuarter_R",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        0.7755904197692871,
+        1.4860143661499023,
+        1.3067314624786377
+      ]
+    },
+    {
+      "name": "DoorHandle_R",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        3.4000000953674316,
+        -0.800000011920929,
+        0.6100000143051147
+      ],
+      "dimensions_blender": [
+        0.07000000029802322,
+        0.46000000834465027,
+        0.10000000149011612
+      ]
+    },
+    {
+      "name": "Mirror_R",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        3.5999999046325684,
+        1.9299999475479126,
+        1.2000000476837158
+      ],
+      "dimensions_blender": [
+        0.5199999809265137,
+        0.6499999761581421,
+        0.2800000011920929
+      ]
+    },
+    {
+      "name": "MirrorGlass_R",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        3.609999895095825,
+        1.6299999952316284,
+        1.2100000381469727
+      ],
+      "dimensions_blender": [
+        0.3799999952316284,
+        0.02500000037252903,
+        0.1899999976158142
+      ]
+    },
+    {
+      "name": "Sill_R",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        3.369999885559082,
+        0.0,
+        -0.7900000214576721
+      ],
+      "dimensions_blender": [
+        0.18000000715255737,
+        5.349999904632568,
+        0.2199999988079071
+      ]
+    },
+    {
+      "name": "HoodPanel",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        6.259751796722412,
+        3.619999885559082,
+        0.40719473361968994
+      ]
+    },
+    {
+      "name": "TrunkPanel",
+      "triangles": 108,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions_blender": [
+        6.239782333374023,
+        2.760000228881836,
+        0.18869692087173462
+      ]
+    },
+    {
+      "name": "FrontGrille",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        7.480000019073486,
+        -0.11999999731779099
+      ],
+      "dimensions_blender": [
+        3.0999999046325684,
+        0.07000000029802322,
+        0.4699999988079071
+      ]
+    },
+    {
+      "name": "FrontSplitter",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        7.480000019073486,
+        -0.7900000214576721
+      ],
+      "dimensions_blender": [
+        6.5,
+        0.4000000059604645,
+        0.12999999523162842
+      ]
+    },
+    {
+      "name": "RearValance",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        -7.449999809265137,
+        -0.6499999761581421
+      ],
+      "dimensions_blender": [
+        5.800000190734863,
+        0.14000000059604645,
+        0.44999998807907104
+      ]
+    },
+    {
+      "name": "Headlight_L",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -2.25,
+        7.53000020980835,
+        0.27000001072883606
+      ],
+      "dimensions_blender": [
+        1.5,
+        0.2199999988079071,
+        0.3400000035762787
+      ]
+    },
+    {
+      "name": "FrontIndicator_L",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -2.3499999046325684,
+        7.53000020980835,
+        -0.25999999046325684
+      ],
+      "dimensions_blender": [
+        0.5600000023841858,
+        0.11999999731779099,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "BrakeLight_L",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -2.0999999046325684,
+        -7.559999942779541,
+        0.47999998927116394
+      ],
+      "dimensions_blender": [
+        1.7200000286102295,
+        0.15000000596046448,
+        0.3700000047683716
+      ]
+    },
+    {
+      "name": "ReverseLight_L",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -0.9100000262260437,
+        -7.559999942779541,
+        0.47999998927116394
+      ],
+      "dimensions_blender": [
+        0.49000000953674316,
+        0.10000000149011612,
+        0.30000001192092896
+      ]
+    },
+    {
+      "name": "Headlight_R",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        2.25,
+        7.53000020980835,
+        0.27000001072883606
+      ],
+      "dimensions_blender": [
+        1.5,
+        0.2199999988079071,
+        0.3400000035762787
+      ]
+    },
+    {
+      "name": "FrontIndicator_R",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        2.3499999046325684,
+        7.53000020980835,
+        -0.25999999046325684
+      ],
+      "dimensions_blender": [
+        0.5600000023841858,
+        0.11999999731779099,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "BrakeLight_R",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        2.0999999046325684,
+        -7.559999942779541,
+        0.47999998927116394
+      ],
+      "dimensions_blender": [
+        1.7200000286102295,
+        0.15000000596046448,
+        0.3700000047683716
+      ]
+    },
+    {
+      "name": "ReverseLight_R",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.9100000262260437,
+        -7.559999942779541,
+        0.47999998927116394
+      ],
+      "dimensions_blender": [
+        0.49000000953674316,
+        0.10000000149011612,
+        0.30000001192092896
+      ]
+    },
+    {
+      "name": "RearPlateRecess",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        -7.480000019073486,
+        0.019999999552965164
+      ],
+      "dimensions_blender": [
+        1.4500000476837158,
+        0.05000000074505806,
+        0.4099999964237213
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        2.0,
+        0.9399999976158142
+      ],
+      "dimensions_blender": [
+        5.400000095367432,
+        1.0,
+        0.47999998927116394
+      ]
+    },
+    {
+      "name": "CenterConsole",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.20000000298023224,
+        0.33000001311302185
+      ],
+      "dimensions_blender": [
+        0.7200000286102295,
+        2.8499999046325684,
+        0.4000000059604645
+      ]
+    },
+    {
+      "name": "InteriorFloor",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        -0.10000000149011612,
+        -0.5299999713897705
+      ],
+      "dimensions_blender": [
+        4.699999809265137,
+        5.800000190734863,
+        0.11999999731779099
+      ]
+    },
+    {
+      "name": "SeatBase_Passenger",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -1.4500000476837158,
+        -0.800000011920929,
+        0.11999999731779099
+      ],
+      "dimensions_blender": [
+        1.4600000381469727,
+        1.5,
+        0.44999998807907104
+      ]
+    },
+    {
+      "name": "SeatBack_Passenger",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -1.4500000476837158,
+        -1.5,
+        0.8700000047683716
+      ],
+      "dimensions_blender": [
+        1.4500000476837158,
+        0.6300846338272095,
+        1.6359224319458008
+      ]
+    },
+    {
+      "name": "Headrest_Passenger",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -1.4500000476837158,
+        -1.7000000476837158,
+        1.8200000524520874
+      ],
+      "dimensions_blender": [
+        0.8799999952316284,
+        0.30000001192092896,
+        0.41999998688697815
+      ]
+    },
+    {
+      "name": "SeatBase_Driver",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        1.4500000476837158,
+        -0.800000011920929,
+        0.11999999731779099
+      ],
+      "dimensions_blender": [
+        1.4600000381469727,
+        1.5,
+        0.44999998807907104
+      ]
+    },
+    {
+      "name": "SeatBack_Driver",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        1.4500000476837158,
+        -1.5,
+        0.8700000047683716
+      ],
+      "dimensions_blender": [
+        1.4500000476837158,
+        0.6300846338272095,
+        1.6359224319458008
+      ]
+    },
+    {
+      "name": "Headrest_Driver",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        1.4500000476837158,
+        -1.7000000476837158,
+        1.8200000524520874
+      ],
+      "dimensions_blender": [
+        0.8799999952316284,
+        0.30000001192092896,
+        0.41999998688697815
+      ]
+    },
+    {
+      "name": "SteeringWheel",
+      "triangles": 2032,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        1.4500000476837158,
+        1.2599999904632568,
+        1.2000000476837158
+      ],
+      "dimensions_blender": [
+        1.090000033378601,
+        0.15000002086162567,
+        1.090000033378601
+      ]
+    },
+    {
+      "name": "GearLever",
+      "triangles": 1016,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.0,
+        0.5199999809265137,
+        0.4000000059604645
+      ],
+      "dimensions_blender": [
+        0.25999999046325684,
+        0.25999999046325684,
+        0.7199999690055847
+      ]
+    },
+    {
+      "name": "HandbrakeLever",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.33000001311302185,
+        -0.6200000047683716,
+        0.550000011920929
+      ],
+      "dimensions_blender": [
+        0.12999999523162842,
+        0.7400000095367432,
+        0.12999999523162842
+      ]
+    },
+    {
+      "name": "Pedal_Clutch",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        0.9399999976158142,
+        2.3499999046325684,
+        0.3199999928474426
+      ],
+      "dimensions_blender": [
+        0.25999999046325684,
+        0.15000000596046448,
+        0.3700000047683716
+      ]
+    },
+    {
+      "name": "Pedal_Brake",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        1.350000023841858,
+        2.3499999046325684,
+        0.3199999928474426
+      ],
+      "dimensions_blender": [
+        0.25999999046325684,
+        0.15000000596046448,
+        0.3700000047683716
+      ]
+    },
+    {
+      "name": "Pedal_Throttle",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        1.7599999904632568,
+        2.3499999046325684,
+        0.3199999928474426
+      ],
+      "dimensions_blender": [
+        0.25999999046325684,
+        0.15000000596046448,
+        0.3700000047683716
+      ]
+    },
+    {
+      "name": "ExhaustTip",
+      "triangles": 508,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -2.6500000953674316,
+        -7.599999904632568,
+        -0.6100000143051147
+      ],
+      "dimensions_blender": [
+        0.3400000035762787,
+        0.4399999976158142,
+        0.3400000333786011
+      ]
+    },
+    {
+      "name": "ExhaustTip.001",
+      "triangles": 508,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        2.6500000953674316,
+        -7.599999904632568,
+        -0.6100000143051147
+      ],
+      "dimensions_blender": [
+        0.3400000035762787,
+        0.4399999976158142,
+        0.3400000333786011
+      ]
+    },
+    {
+      "name": "Wheel_FL_Tire",
+      "triangles": 3072,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -2.9000000953674316,
+        4.699999809265137,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        1.3000001907348633,
+        2.799999952316284,
+        2.799999952316284
+      ]
+    },
+    {
+      "name": "Wheel_FL_Rim",
+      "triangles": 3300,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -2.9000000953674316,
+        4.699999809265137,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        1.1600000858306885,
+        1.9440001249313354,
+        1.944000005722046
+      ]
+    },
+    {
+      "name": "Wheel_FL_BrakeDisc",
+      "triangles": 512,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -2.9000000953674316,
+        4.699999809265137,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        0.04500013589859009,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "Wheel_FR_Tire",
+      "triangles": 3072,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        2.9000000953674316,
+        4.699999809265137,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        1.2999999523162842,
+        2.799999952316284,
+        2.799999952316284
+      ]
+    },
+    {
+      "name": "Wheel_FR_Rim",
+      "triangles": 3300,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        2.9000000953674316,
+        4.699999809265137,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        1.159999966621399,
+        1.944000005722046,
+        1.944000005722046
+      ]
+    },
+    {
+      "name": "Wheel_FR_BrakeDisc",
+      "triangles": 512,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        2.9000000953674316,
+        4.699999809265137,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        0.04500001668930054,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "Wheel_RL_Tire",
+      "triangles": 3072,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -2.9000000953674316,
+        -4.5,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        1.3000001907348633,
+        2.799999952316284,
+        2.799999952316284
+      ]
+    },
+    {
+      "name": "Wheel_RL_Rim",
+      "triangles": 3300,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -2.9000000953674316,
+        -4.5,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        1.1600000858306885,
+        1.9440001249313354,
+        1.944000005722046
+      ]
+    },
+    {
+      "name": "Wheel_RL_BrakeDisc",
+      "triangles": 512,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        -2.9000000953674316,
+        -4.5,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        0.04500013589859009,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "Wheel_RR_Tire",
+      "triangles": 3072,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        2.9000000953674316,
+        -4.5,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        1.2999999523162842,
+        2.799999952316284,
+        2.799999952316284
+      ]
+    },
+    {
+      "name": "Wheel_RR_Rim",
+      "triangles": 3300,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        2.9000000953674316,
+        -4.5,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        1.159999966621399,
+        1.944000005722046,
+        1.944000005722046
+      ]
+    },
+    {
+      "name": "Wheel_RR_BrakeDisc",
+      "triangles": 512,
+      "nonmanifold_edges": 0,
+      "zero_area_faces": 0,
+      "uv_layers": 1,
+      "pivot_blender": [
+        2.9000000953674316,
+        -4.5,
+        -2.799999952316284
+      ],
+      "dimensions_blender": [
+        0.04500001668930054,
+        1.5,
+        1.5
+      ]
+    }
+  ],
+  "total_triangles": 43964,
+  "obj_roundtrip_bounds_passed": true,
+  "bounds_blender": [
+    [
+      -3.859999895095825,
+      -7.819999694824219,
+      -4.199999809265137
+    ],
+    [
+      3.859999895095825,
+      7.679999828338623,
+      2.5399999618530273
+    ]
+  ],
+  "limits": [
+    "Visual prototype only; no driving or gearbox code in mesh",
+    "Blender empties require explicit Studio Attachment conversion",
+    "Suspension/steering body-clearance sweep still needs gameplay QA",
+    "Doors are cosmetic body panels; opening doors/hood is not implemented"
+  ],
+  "studio_template": "ReplicatedStorage.Assets.Cars.CedarCoupePrototype",
+  "studio_checks": {
+    "mesh_count": 65,
+    "front_negative_z": true,
+    "mount_positions_passed": true,
+    "wheel_sizes_passed": true,
+    "body_shell_r2": "rbxassetid://126237136650051"
+  },
+  "clearance_audit": {
+    "checks": 84,
+    "body_surface_intersections": [],
+    "scope": "Tire triangle surface against body shell; excludes containment, other panels and road/chassis collision"
+  }
+}

@@ -1,0 +1,4623 @@
+<?xml version='1.0' encoding='utf-8'?>
+<roblox version="4">
+  <Item class="Model" referent="RBX1">
+    <Properties>
+      <string name="Name">CedarCoupePrototype</string>
+      <CoordinateFrame name="WorldPivotData">
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <R00>1</R00>
+        <R01>0</R01>
+        <R02>0</R02>
+        <R10>0</R10>
+        <R11>1</R11>
+        <R12>0</R12>
+        <R20>0</R20>
+        <R21>0</R21>
+        <R22>1</R22>
+      </CoordinateFrame>
+      <Ref name="PrimaryPart">RBX127</Ref>
+    </Properties>
+    <Item class="Folder" referent="RBX2">
+      <Properties>
+        <string name="Name">Wheels</string>
+      </Properties>
+      <Item class="Model" referent="RBX3">
+        <Properties>
+          <string name="Name">FL</string>
+          <CoordinateFrame name="WorldPivotData">
+            <X>-2.9000000953674316</X>
+            <Y>-2.8000001907348633</Y>
+            <Z>-4.699999809265137</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+        <Item class="MeshPart" referent="RBX4">
+          <Properties>
+            <string name="Name">Wheel_FL_BrakeDisc</string>
+            <Vector3 name="size">
+              <X>0.045000314712524414</X>
+              <Y>1.5</Y>
+              <Z>1.5</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>-3.1775007247924805</X>
+              <Y>-2.799999713897705</Y>
+              <Z>-4.700000286102295</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>-0.2775001525878906</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">1088</token>
+            <Color3 name="Color">
+              <R>0.5882353186607361</R>
+              <G>0.6313725709915161</G>
+              <B>0.6666666865348816</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://81476751363596</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+        <Item class="MeshPart" referent="RBX5">
+          <Properties>
+            <string name="Name">Wheel_FL_Rim</string>
+            <Vector3 name="size">
+              <X>1.1599998474121094</X>
+              <Y>1.9439998865127563</Y>
+              <Z>1.944000244140625</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>-2.960000514984131</X>
+              <Y>-2.799999713897705</Y>
+              <Z>-4.700000286102295</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>-0.059999942779541016</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">1088</token>
+            <Color3 name="Color">
+              <R>0.5882353186607361</R>
+              <G>0.6313725709915161</G>
+              <B>0.6666666865348816</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://121649708321838</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+        <Item class="MeshPart" referent="RBX6">
+          <Properties>
+            <string name="Name">Wheel_FL_Tire</string>
+            <Vector3 name="size">
+              <X>1.3000001907348633</X>
+              <Y>2.799999713897705</Y>
+              <Z>2.799999952316284</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>-2.90000057220459</X>
+              <Y>-2.799999713897705</Y>
+              <Z>-4.700000286102295</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>0</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">272</token>
+            <Color3 name="Color">
+              <R>0.07058823853731155</R>
+              <G>0.0941176488995552</G>
+              <B>0.11372549086809158</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://139806178066122</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Model" referent="RBX7">
+        <Properties>
+          <string name="Name">FR</string>
+          <CoordinateFrame name="WorldPivotData">
+            <X>2.9000000953674316</X>
+            <Y>-2.8000001907348633</Y>
+            <Z>-4.699999809265137</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+        <Item class="MeshPart" referent="RBX8">
+          <Properties>
+            <string name="Name">Wheel_FR_BrakeDisc</string>
+            <Vector3 name="size">
+              <X>0.04499983787536621</X>
+              <Y>1.5</Y>
+              <Z>1.5</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>3.177499771118164</X>
+              <Y>-2.799999713897705</Y>
+              <Z>-4.700001239776611</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>0.2775001525878906</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">1088</token>
+            <Color3 name="Color">
+              <R>0.5882353186607361</R>
+              <G>0.6313725709915161</G>
+              <B>0.6666666865348816</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://95096048640216</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+        <Item class="MeshPart" referent="RBX9">
+          <Properties>
+            <string name="Name">Wheel_FR_Rim</string>
+            <Vector3 name="size">
+              <X>1.1599998474121094</X>
+              <Y>1.9439998865127563</Y>
+              <Z>1.944000005722046</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>2.9599995613098145</X>
+              <Y>-2.799999713897705</Y>
+              <Z>-4.700001239776611</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>0.059999942779541016</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">1088</token>
+            <Color3 name="Color">
+              <R>0.5882353186607361</R>
+              <G>0.6313725709915161</G>
+              <B>0.6666666865348816</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://73123961499586</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+        <Item class="MeshPart" referent="RBX10">
+          <Properties>
+            <string name="Name">Wheel_FR_Tire</string>
+            <Vector3 name="size">
+              <X>1.3000001907348633</X>
+              <Y>2.799999713897705</Y>
+              <Z>2.799999952316284</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>2.8999996185302734</X>
+              <Y>-2.799999713897705</Y>
+              <Z>-4.700001239776611</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>0</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">272</token>
+            <Color3 name="Color">
+              <R>0.07058823853731155</R>
+              <G>0.0941176488995552</G>
+              <B>0.11372549086809158</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://103657792645811</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Model" referent="RBX11">
+        <Properties>
+          <string name="Name">RL</string>
+          <CoordinateFrame name="WorldPivotData">
+            <X>-2.9000000953674316</X>
+            <Y>-2.8000001907348633</Y>
+            <Z>4.5</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+        <Item class="MeshPart" referent="RBX12">
+          <Properties>
+            <string name="Name">Wheel_RL_BrakeDisc</string>
+            <Vector3 name="size">
+              <X>0.045000314712524414</X>
+              <Y>1.5</Y>
+              <Z>1.5</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>-3.177499771118164</X>
+              <Y>-2.799999713897705</Y>
+              <Z>4.500000476837158</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>-0.2775001525878906</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">1088</token>
+            <Color3 name="Color">
+              <R>0.5882353186607361</R>
+              <G>0.6313725709915161</G>
+              <B>0.6666666865348816</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://72655985959956</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+        <Item class="MeshPart" referent="RBX13">
+          <Properties>
+            <string name="Name">Wheel_RL_Rim</string>
+            <Vector3 name="size">
+              <X>1.1599998474121094</X>
+              <Y>1.9439998865127563</Y>
+              <Z>1.944000244140625</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>-2.9599995613098145</X>
+              <Y>-2.799999713897705</Y>
+              <Z>4.500000476837158</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>-0.059999942779541016</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">1088</token>
+            <Color3 name="Color">
+              <R>0.5882353186607361</R>
+              <G>0.6313725709915161</G>
+              <B>0.6666666865348816</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://79437087604187</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+        <Item class="MeshPart" referent="RBX14">
+          <Properties>
+            <string name="Name">Wheel_RL_Tire</string>
+            <Vector3 name="size">
+              <X>1.3000001907348633</X>
+              <Y>2.799999713897705</Y>
+              <Z>2.799999952316284</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>-2.8999996185302734</X>
+              <Y>-2.799999713897705</Y>
+              <Z>4.500000476837158</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>0</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">272</token>
+            <Color3 name="Color">
+              <R>0.07058823853731155</R>
+              <G>0.0941176488995552</G>
+              <B>0.11372549086809158</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://138116890959218</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Model" referent="RBX15">
+        <Properties>
+          <string name="Name">RR</string>
+          <CoordinateFrame name="WorldPivotData">
+            <X>2.9000000953674316</X>
+            <Y>-2.8000001907348633</Y>
+            <Z>4.5</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+        <Item class="MeshPart" referent="RBX16">
+          <Properties>
+            <string name="Name">Wheel_RR_BrakeDisc</string>
+            <Vector3 name="size">
+              <X>0.04499983787536621</X>
+              <Y>1.5</Y>
+              <Z>1.5</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>3.1775007247924805</X>
+              <Y>-2.799999713897705</Y>
+              <Z>4.499999523162842</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>0.2775001525878906</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">1088</token>
+            <Color3 name="Color">
+              <R>0.5882353186607361</R>
+              <G>0.6313725709915161</G>
+              <B>0.6666666865348816</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://98028982756386</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+        <Item class="MeshPart" referent="RBX17">
+          <Properties>
+            <string name="Name">Wheel_RR_Rim</string>
+            <Vector3 name="size">
+              <X>1.1599998474121094</X>
+              <Y>1.9439998865127563</Y>
+              <Z>1.944000005722046</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>2.960000514984131</X>
+              <Y>-2.799999713897705</Y>
+              <Z>4.499999523162842</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>0.059999942779541016</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">1088</token>
+            <Color3 name="Color">
+              <R>0.5882353186607361</R>
+              <G>0.6313725709915161</G>
+              <B>0.6666666865348816</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://128919480458327</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+        <Item class="MeshPart" referent="RBX18">
+          <Properties>
+            <string name="Name">Wheel_RR_Tire</string>
+            <Vector3 name="size">
+              <X>1.3000001907348633</X>
+              <Y>2.799999713897705</Y>
+              <Z>2.799999952316284</Z>
+            </Vector3>
+            <CoordinateFrame name="CFrame">
+              <X>2.90000057220459</X>
+              <Y>-2.799999713897705</Y>
+              <Z>4.499999523162842</Z>
+              <R00>-1</R00>
+              <R01>0</R01>
+              <R02>-8.742277657347586e-08</R02>
+              <R10>0</R10>
+              <R11>1</R11>
+              <R12>0</R12>
+              <R20>8.742277657347586e-08</R20>
+              <R21>0</R21>
+              <R22>-1</R22>
+            </CoordinateFrame>
+            <CoordinateFrame name="PivotOffset">
+              <X>0</X>
+              <Y>0</Y>
+              <Z>0</Z>
+              <R00>1</R00>
+              <R01>-1.9952032520196306e-23</R01>
+              <R02>-2.4492937051703357e-16</R02>
+              <R10>-2.4492937051703357e-16</R10>
+              <R11>-1.6292068494294654e-07</R11>
+              <R12>-1</R12>
+              <R20>-1.9952029364752685e-23</R20>
+              <R21>1</R21>
+              <R22>-1.6292068494294654e-07</R22>
+            </CoordinateFrame>
+            <float name="Transparency">0</float>
+            <token name="Material">272</token>
+            <Color3 name="Color">
+              <R>0.07058823853731155</R>
+              <G>0.0941176488995552</G>
+              <B>0.11372549086809158</B>
+            </Color3>
+            <bool name="Anchored">true</bool>
+            <bool name="CanCollide">false</bool>
+            <bool name="CanQuery">false</bool>
+            <bool name="CanTouch">false</bool>
+            <bool name="Massless">true</bool>
+            <Content name="MeshId">
+              <url>rbxassetid://70795542284247</url>
+            </Content>
+            <Content name="TextureID">
+              <null />
+            </Content>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="Folder" referent="RBX19">
+      <Properties>
+        <string name="Name">Controls</string>
+      </Properties>
+      <Item class="MeshPart" referent="RBX20">
+        <Properties>
+          <string name="Name">GearLever</string>
+          <Vector3 name="size">
+            <X>0.25999999046325684</X>
+            <Y>0.7200000286102295</Y>
+            <Z>0.2600000202655792</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-4.5459884745469026e-08</X>
+            <Y>0.7649993896484375</Y>
+            <Z>-0.5200004577636719</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>-0.3649999797344208</Y>
+            <Z>-1.1920928955078125e-07</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1088</token>
+          <Color3 name="Color">
+            <R>0.5882353186607361</R>
+            <G>0.6313725709915161</G>
+            <B>0.6666666865348816</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://101162217084664</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="Motor6D" referent="RBX21">
+        <Properties>
+          <string name="Name">GearLeverMotor</string>
+          <Ref name="Part0">RBX127</Ref>
+          <Ref name="Part1">RBX20</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>0.4000000059604645</Y>
+            <Z>-0.5199999809265137</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="C1">
+            <X>-4.545984211290488e-08</X>
+            <Y>-0.364999383687973</Y>
+            <Z>-4.76837158203125e-07</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>-8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="RBX22">
+        <Properties>
+          <string name="Name">HandbrakeLever</string>
+          <Vector3 name="size">
+            <X>0.12999999523162842</X>
+            <Y>0.13000011444091797</Y>
+            <Z>0.7400000095367432</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>0.3299999535083771</X>
+            <Y>0.6499996185302734</Y>
+            <Z>0.2800006568431854</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>-0.09999990463256836</Y>
+            <Z>-0.3400000333786011</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://76340893832050</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="Motor6D" referent="RBX23">
+        <Properties>
+          <string name="Name">HandbrakeLeverMotor</string>
+          <Ref name="Part0">RBX127</Ref>
+          <Ref name="Part1">RBX22</Ref>
+          <CoordinateFrame name="C0">
+            <X>0.33000001311302185</X>
+            <Y>0.550000011920929</Y>
+            <Z>0.6200000047683716</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="C1">
+            <X>-2.9802322387695312e-08</X>
+            <Y>-0.09999960660934448</Y>
+            <Z>-0.33999931812286377</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>-8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="RBX24">
+        <Properties>
+          <string name="Name">Pedal_Brake</string>
+          <Vector3 name="size">
+            <X>0.25999999046325684</X>
+            <Y>0.3700000047683716</Y>
+            <Z>0.15000009536743164</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>1.3499997854232788</X>
+            <Y>0.03000020980834961</Y>
+            <Z>-2.3500003814697266</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0.28999999165534973</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1088</token>
+          <Color3 name="Color">
+            <R>0.5882353186607361</R>
+            <G>0.6313725709915161</G>
+            <B>0.6666666865348816</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://73664792628756</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="Motor6D" referent="RBX25">
+        <Properties>
+          <string name="Name">Pedal_BrakeMotor</string>
+          <Ref name="Part0">RBX127</Ref>
+          <Ref name="Part1">RBX24</Ref>
+          <CoordinateFrame name="C0">
+            <X>1.350000023841858</X>
+            <Y>0.3199999928474426</Y>
+            <Z>-2.3499999046325684</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="C1">
+            <X>-2.384185791015625e-07</X>
+            <Y>0.289999783039093</Y>
+            <Z>-4.76837158203125e-07</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>-8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="RBX26">
+        <Properties>
+          <string name="Name">Pedal_Clutch</string>
+          <Vector3 name="size">
+            <X>0.25999993085861206</X>
+            <Y>0.3700000047683716</Y>
+            <Z>0.15000009536743164</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>0.9399997591972351</X>
+            <Y>0.03000020980834961</Y>
+            <Z>-2.3500003814697266</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>-5.960464477539063e-08</X>
+            <Y>0.28999999165534973</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1088</token>
+          <Color3 name="Color">
+            <R>0.5882353186607361</R>
+            <G>0.6313725709915161</G>
+            <B>0.6666666865348816</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://116153658159764</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="Motor6D" referent="RBX27">
+        <Properties>
+          <string name="Name">Pedal_ClutchMotor</string>
+          <Ref name="Part0">RBX127</Ref>
+          <Ref name="Part1">RBX26</Ref>
+          <CoordinateFrame name="C0">
+            <X>0.9399999976158142</X>
+            <Y>0.3199999928474426</Y>
+            <Z>-2.3499999046325684</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="C1">
+            <X>-2.384185791015625e-07</X>
+            <Y>0.289999783039093</Y>
+            <Z>-4.76837158203125e-07</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>-8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="RBX28">
+        <Properties>
+          <string name="Name">Pedal_Throttle</string>
+          <Vector3 name="size">
+            <X>0.25999999046325684</X>
+            <Y>0.3700000047683716</Y>
+            <Z>0.15000009536743164</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>1.7599997520446777</X>
+            <Y>0.03000020980834961</Y>
+            <Z>-2.3500006198883057</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0.28999999165534973</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1088</token>
+          <Color3 name="Color">
+            <R>0.5882353186607361</R>
+            <G>0.6313725709915161</G>
+            <B>0.6666666865348816</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://109984456217437</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="Motor6D" referent="RBX29">
+        <Properties>
+          <string name="Name">Pedal_ThrottleMotor</string>
+          <Ref name="Part0">RBX127</Ref>
+          <Ref name="Part1">RBX28</Ref>
+          <CoordinateFrame name="C0">
+            <X>1.7599999904632568</X>
+            <Y>0.3199999928474426</Y>
+            <Z>-2.3499999046325684</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="C1">
+            <X>-2.384185791015625e-07</X>
+            <Y>0.289999783039093</Y>
+            <Z>-7.152557373046875e-07</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>-8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="RBX30">
+        <Properties>
+          <string name="Name">SteeringWheel</string>
+          <Vector3 name="size">
+            <X>1.0900001525878906</X>
+            <Y>1.0899999141693115</Y>
+            <Z>0.15000009536743164</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>1.4499999284744263</X>
+            <Y>1.1999993324279785</Y>
+            <Z>-1.2600003480911255</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://135692554297466</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="Motor6D" referent="RBX31">
+        <Properties>
+          <string name="Name">SteeringWheelMotor</string>
+          <Ref name="Part0">RBX127</Ref>
+          <Ref name="Part1">RBX30</Ref>
+          <CoordinateFrame name="C0">
+            <X>1.4500000476837158</X>
+            <Y>1.2000000476837158</Y>
+            <Z>-1.2599999904632568</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="C1">
+            <X>-1.1920928955078125e-07</X>
+            <Y>7.152557373046875e-07</Y>
+            <Z>-3.5762786865234375e-07</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>-8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="RBX32">
+      <Properties>
+        <string name="Name">BodyVisuals</string>
+        <CoordinateFrame name="WorldPivotData">
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+      </Properties>
+      <Item class="MeshPart" referent="RBX33">
+        <Properties>
+          <string name="Name">APillar_L</string>
+          <Vector3 name="size">
+            <X>0.7401638031005859</X>
+            <Y>1.4280636310577393</Y>
+            <Z>1.6999998092651367</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-2.8350002765655518</X>
+            <Y>1.6299996376037598</Y>
+            <Z>-1.999999761581421</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>-2.8350000381469727</X>
+            <Y>-1.6299995183944702</Y>
+            <Z>-2.000000238418579</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://132681166905763</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX34">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX33</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX35">
+        <Properties>
+          <string name="Name">APillar_R</string>
+          <Vector3 name="size">
+            <X>0.7401638031005859</X>
+            <Y>1.4280636310577393</Y>
+            <Z>1.6999998092651367</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>2.8349997997283936</X>
+            <Y>1.6299996376037598</Y>
+            <Z>-2.000000238418579</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>2.8350000381469727</X>
+            <Y>-1.6299995183944702</Y>
+            <Z>-2.000000238418579</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://97702201598673</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX36">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX35</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX37">
+        <Properties>
+          <string name="Name">B_Pillar_L</string>
+          <Vector3 name="size">
+            <X>0.7100000381469727</X>
+            <Y>1.2137011289596558</Y>
+            <Z>0.13000023365020752</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-2.8949999809265137</X>
+            <Y>1.6249995231628418</Y>
+            <Z>1.1949999332427979</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>-2.8949999809265137</X>
+            <Y>-1.625</Y>
+            <Z>1.1949996948242188</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://116875564656848</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX38">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX37</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX39">
+        <Properties>
+          <string name="Name">B_Pillar_R</string>
+          <Vector3 name="size">
+            <X>0.7100000381469727</X>
+            <Y>1.2137011289596558</Y>
+            <Z>0.13000023365020752</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>2.8949999809265137</X>
+            <Y>1.6249995231628418</Y>
+            <Z>1.1949994564056396</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>2.8949999809265137</X>
+            <Y>-1.625</Y>
+            <Z>1.1949996948242188</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://129216397472873</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX40">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX39</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX41">
+        <Properties>
+          <string name="Name">Windshield</string>
+          <Vector3 name="size">
+            <X>6.1900153160095215</X>
+            <Y>1.3030003309249878</Y>
+            <Z>1.6999999284744263</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-1.809651166695403e-07</X>
+            <Y>1.662498950958252</Y>
+            <Z>-2.0699996948242188</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>-1.6624996662139893</Y>
+            <Z>-2.070000410079956</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0.25</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.13725490868091583</R>
+            <G>0.2549019753932953</G>
+            <B>0.2980392277240753</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://115330498978959</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX42">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX41</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX43">
+        <Properties>
+          <string name="Name">BrakeLight_L</string>
+          <Vector3 name="size">
+            <X>1.720000147819519</X>
+            <Y>0.37000003457069397</Y>
+            <Z>0.14999961853027344</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-2.099999189376831</X>
+            <Y>0.4799995422363281</Y>
+            <Z>7.559999465942383</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>-2.9802322387695312e-08</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.47058823704719543</R>
+            <G>0.0313725508749485</G>
+            <B>0.0470588244497776</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://126254466602323</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX44">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX43</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX45">
+        <Properties>
+          <string name="Name">BrakeLight_R</string>
+          <Vector3 name="size">
+            <X>1.720000147819519</X>
+            <Y>0.37000003457069397</Y>
+            <Z>0.14999961853027344</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>2.1000006198883057</X>
+            <Y>0.4799995422363281</Y>
+            <Z>7.559999465942383</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>-2.9802322387695312e-08</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.47058823704719543</R>
+            <G>0.0313725508749485</G>
+            <B>0.0470588244497776</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://129990669948309</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX46">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX45</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX47">
+        <Properties>
+          <string name="Name">CPillar_L</string>
+          <Vector3 name="size">
+            <X>0.8073995113372803</X>
+            <Y>1.4081600904464722</Y>
+            <Z>1.3700003623962402</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-2.809999704360962</X>
+            <Y>1.6299996376037598</Y>
+            <Z>3.2850000858306885</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>-2.809999942779541</X>
+            <Y>-1.630000352859497</Y>
+            <Z>3.2849996089935303</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://129242731879812</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX48">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX47</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX49">
+        <Properties>
+          <string name="Name">CPillar_R</string>
+          <Vector3 name="size">
+            <X>0.8073995113372803</X>
+            <Y>1.4081602096557617</Y>
+            <Z>1.3700003623962402</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>2.81000018119812</X>
+            <Y>1.6299996376037598</Y>
+            <Z>3.2849996089935303</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>2.809999942779541</X>
+            <Y>-1.630000352859497</Y>
+            <Z>3.2849996089935303</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://74703029102008</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX50">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX49</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX51">
+        <Properties>
+          <string name="Name">CenterConsole</string>
+          <Vector3 name="size">
+            <X>0.7200000286102295</X>
+            <Y>0.4000004231929779</Y>
+            <Z>2.8499999046325684</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-1.7484621750440965e-08</X>
+            <Y>0.3299994468688965</Y>
+            <Z>-0.20000076293945312</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>2.9802322387695312e-08</Y>
+            <Z>1.4901161193847656e-08</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://117076486476553</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX52">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX51</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX53">
+        <Properties>
+          <string name="Name">Dashboard</string>
+          <Vector3 name="size">
+            <X>5.400000095367432</X>
+            <Y>0.4800001382827759</Y>
+            <Z>1</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-1.7484555314695172e-07</X>
+            <Y>0.940000057220459</Y>
+            <Z>-2</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://107143327566647</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX54">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX53</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX55">
+        <Properties>
+          <string name="Name">DoorHandle_L</string>
+          <Vector3 name="size">
+            <X>0.07000017166137695</X>
+            <Y>0.10000002384185791</Y>
+            <Z>0.4599999785423279</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-3.4000000953674316</X>
+            <Y>0.6099996566772461</Y>
+            <Z>0.7999995350837708</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>-5.960464477539063e-08</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1088</token>
+          <Color3 name="Color">
+            <R>0.5882353186607361</R>
+            <G>0.6313725709915161</G>
+            <B>0.6666666865348816</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://132684113607261</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX56">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX55</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX57">
+        <Properties>
+          <string name="Name">DoorHandle_R</string>
+          <Vector3 name="size">
+            <X>0.07000017166137695</X>
+            <Y>0.10000002384185791</Y>
+            <Z>0.4599999785423279</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>3.4000000953674316</X>
+            <Y>0.6099996566772461</Y>
+            <Z>0.799998939037323</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>-5.960464477539063e-08</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1088</token>
+          <Color3 name="Color">
+            <R>0.5882353186607361</R>
+            <G>0.6313725709915161</G>
+            <B>0.6666666865348816</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://82731818796339</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX58">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX57</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX59">
+        <Properties>
+          <string name="Name">ExhaustTip</string>
+          <Vector3 name="size">
+            <X>0.3400001525878906</X>
+            <Y>0.3400000333786011</Y>
+            <Z>0.4399995803833008</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-2.6499993801116943</X>
+            <Y>-0.6099996566772461</Y>
+            <Z>7.600000381469727</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1088</token>
+          <Color3 name="Color">
+            <R>0.5882353186607361</R>
+            <G>0.6313725709915161</G>
+            <B>0.6666666865348816</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://135675545156606</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX60">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX59</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX61">
+        <Properties>
+          <string name="Name">ExhaustTip.001</string>
+          <Vector3 name="size">
+            <X>0.3400001525878906</X>
+            <Y>0.3400000333786011</Y>
+            <Z>0.4399995803833008</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>2.650000810623169</X>
+            <Y>-0.6099996566772461</Y>
+            <Z>7.600000381469727</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1088</token>
+          <Color3 name="Color">
+            <R>0.5882353186607361</R>
+            <G>0.6313725709915161</G>
+            <B>0.6666666865348816</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://115794740354277</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX62">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX61</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX63">
+        <Properties>
+          <string name="Name">FrontGrille</string>
+          <Vector3 name="size">
+            <X>3.0999999046325684</X>
+            <Y>0.4699999690055847</Y>
+            <Z>0.06999969482421875</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-6.539223136314831e-07</X>
+            <Y>-0.11999988555908203</Y>
+            <Z>-7.479999542236328</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>-7.450580596923828e-09</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://84315674301648</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX64">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX63</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX65">
+        <Properties>
+          <string name="Name">FrontIndicator_L</string>
+          <Vector3 name="size">
+            <X>0.559999942779541</X>
+            <Y>0.20000000298023224</Y>
+            <Z>0.11999988555908203</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-2.3500006198883057</X>
+            <Y>-0.25999975204467773</Y>
+            <Z>-7.529998779296875</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.9019607901573181</R>
+            <G>0.47058823704719543</G>
+            <B>0.05882352963089943</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://105718019483100</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX66">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX65</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX67">
+        <Properties>
+          <string name="Name">FrontIndicator_R</string>
+          <Vector3 name="size">
+            <X>0.559999942779541</X>
+            <Y>0.20000000298023224</Y>
+            <Z>0.11999988555908203</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>2.349999189376831</X>
+            <Y>-0.25999975204467773</Y>
+            <Z>-7.529998779296875</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.9019607901573181</R>
+            <G>0.47058823704719543</G>
+            <B>0.05882352963089943</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://110976333419826</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX68">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX67</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX69">
+        <Properties>
+          <string name="Name">FrontSplitter</string>
+          <Vector3 name="size">
+            <X>6.5</X>
+            <Y>0.12999999523162842</Y>
+            <Z>0.39999961853027344</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-6.539223136314831e-07</X>
+            <Y>-0.7899999618530273</Y>
+            <Z>-7.479999542236328</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://121535035684814</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX70">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX69</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX71">
+        <Properties>
+          <string name="Name">Headlight_L</string>
+          <Vector3 name="size">
+            <X>1.5</X>
+            <Y>0.3400000333786011</Y>
+            <Z>0.2200002670288086</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-2.2500007152557373</X>
+            <Y>0.26999998092651367</Y>
+            <Z>-7.529998779296875</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.7254902124404907</R>
+            <G>0.843137264251709</G>
+            <B>0.8823529481887817</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://94233028110348</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX72">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX71</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX73">
+        <Properties>
+          <string name="Name">Headlight_R</string>
+          <Vector3 name="size">
+            <X>1.5</X>
+            <Y>0.3400000333786011</Y>
+            <Z>0.2200002670288086</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>2.2499992847442627</X>
+            <Y>0.26999998092651367</Y>
+            <Z>-7.529998779296875</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.7254902124404907</R>
+            <G>0.843137264251709</G>
+            <B>0.8823529481887817</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://125117045861124</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX74">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX73</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX75">
+        <Properties>
+          <string name="Name">Headrest_Driver</string>
+          <Vector3 name="size">
+            <X>0.880000114440918</X>
+            <Y>0.41999995708465576</Y>
+            <Z>0.2999999523162842</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>1.4500001668930054</X>
+            <Y>1.8199992179870605</Y>
+            <Z>1.7000006437301636</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>1.1920928955078125e-07</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.10980392247438431</R>
+            <G>0.13333334028720856</G>
+            <B>0.14509804546833038</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://92225997290485</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX76">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX75</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX77">
+        <Properties>
+          <string name="Name">Headrest_Passenger</string>
+          <Vector3 name="size">
+            <X>0.880000114440918</X>
+            <Y>0.41999995708465576</Y>
+            <Z>0.2999999523162842</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-1.4499999284744263</X>
+            <Y>1.8199992179870605</Y>
+            <Z>1.7000008821487427</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>1.1920928955078125e-07</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.10980392247438431</R>
+            <G>0.13333334028720856</G>
+            <B>0.14509804546833038</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://79793034907997</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX78">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX77</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX79">
+        <Properties>
+          <string name="Name">HoodPanel</string>
+          <Vector3 name="size">
+            <X>6.259751796722412</X>
+            <Y>0.4071953296661377</Y>
+            <Z>3.619999647140503</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-4.2924582999148697e-07</X>
+            <Y>0.8649992942810059</Y>
+            <Z>-4.909999847412109</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>-0.8649992942810059</Y>
+            <Z>-4.909999847412109</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://80797970929889</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX80">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX79</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX81">
+        <Properties>
+          <string name="Name">InteriorFloor</string>
+          <Vector3 name="size">
+            <X>4.699999809265137</X>
+            <Y>0.12000095844268799</Y>
+            <Z>5.800000190734863</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>8.742310875220483e-09</X>
+            <Y>-0.5299997329711914</Y>
+            <Z>0.10000038146972656</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>-9.685754776000977e-08</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://116889267017807</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX82">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX81</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX83">
+        <Properties>
+          <string name="Name">MirrorGlass_L</string>
+          <Vector3 name="size">
+            <X>0.38000011444091797</X>
+            <Y>0.19000005722045898</Y>
+            <Z>0.02500009536743164</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-3.609999895095825</X>
+            <Y>1.2099995613098145</Y>
+            <Z>-1.629998803138733</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0.25</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.13725490868091583</R>
+            <G>0.2549019753932953</G>
+            <B>0.2980392277240753</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://139807007544736</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX84">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX83</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX85">
+        <Properties>
+          <string name="Name">MirrorGlass_R</string>
+          <Vector3 name="size">
+            <X>0.38000011444091797</X>
+            <Y>0.19000005722045898</Y>
+            <Z>0.02500009536743164</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>3.609999656677246</X>
+            <Y>1.2099995613098145</Y>
+            <Z>-1.6299995183944702</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0.25</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.13725490868091583</R>
+            <G>0.2549019753932953</G>
+            <B>0.2980392277240753</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://110761655113245</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX86">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX85</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX87">
+        <Properties>
+          <string name="Name">Mirror_L</string>
+          <Vector3 name="size">
+            <X>0.5199999809265137</X>
+            <Y>0.2799999713897705</Y>
+            <Z>0.6499999761581421</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-3.6000001430511475</X>
+            <Y>1.1999993324279785</Y>
+            <Z>-1.9299999475479126</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>1.1920928955078125e-07</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://87373663679489</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX88">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX87</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX89">
+        <Properties>
+          <string name="Name">Mirror_R</string>
+          <Vector3 name="size">
+            <X>0.5199999809265137</X>
+            <Y>0.2799999713897705</Y>
+            <Z>0.6499999761581421</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>3.5999996662139893</X>
+            <Y>1.1999993324279785</Y>
+            <Z>-1.93000066280365</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>1.1920928955078125e-07</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://106505004187218</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX90">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX89</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX91">
+        <Properties>
+          <string name="Name">RearGlass</string>
+          <Vector3 name="size">
+            <X>6.18740177154541</X>
+            <Y>1.2816632986068726</Y>
+            <Z>1.3500006198883057</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>2.9505187626455154e-07</X>
+            <Y>1.653210163116455</Y>
+            <Z>3.375</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>1.1920928955078125e-07</X>
+            <Y>-1.6532106399536133</Y>
+            <Z>3.375</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0.25</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.13725490868091583</R>
+            <G>0.2549019753932953</G>
+            <B>0.2980392277240753</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://132692460125662</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX92">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX91</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX93">
+        <Properties>
+          <string name="Name">RearPlateRecess</string>
+          <Vector3 name="size">
+            <X>1.4500000476837158</X>
+            <Y>0.4099999964237213</Y>
+            <Z>0.05000019073486328</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>6.539223136314831e-07</X>
+            <Y>0.019999980926513672</Y>
+            <Z>7.479999542236328</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>3.725290298461914e-09</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://130038695780532</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX94">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX93</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX95">
+        <Properties>
+          <string name="Name">RearQuarter_L</string>
+          <Vector3 name="size">
+            <X>0.7755904197692871</X>
+            <Y>1.3067313432693481</Y>
+            <Z>1.4860148429870605</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-2.8412067890167236</X>
+            <Y>1.6322627067565918</Y>
+            <Z>3.298708200454712</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>-2.8412070274353027</X>
+            <Y>-1.632263422012329</Y>
+            <Z>3.29870867729187</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://118711825074833</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX96">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX95</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX97">
+        <Properties>
+          <string name="Name">RearQuarter_R</string>
+          <Vector3 name="size">
+            <X>0.7755904197692871</X>
+            <Y>1.3067313432693481</Y>
+            <Z>1.4860146045684814</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>2.841207265853882</X>
+            <Y>1.6322627067565918</Y>
+            <Z>3.2987096309661865</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>2.8412070274353027</X>
+            <Y>-1.632263422012329</Y>
+            <Z>3.298708915710449</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://89780947021251</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX98">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX97</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX99">
+        <Properties>
+          <string name="Name">RearValance</string>
+          <Vector3 name="size">
+            <X>5.800000190734863</X>
+            <Y>0.45000001788139343</Y>
+            <Z>0.1400003433227539</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>6.51299728815502e-07</X>
+            <Y>-0.6499996185302734</Y>
+            <Z>7.450000762939453</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://138459268164026</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX100">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX99</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX101">
+        <Properties>
+          <string name="Name">ReverseLight_L</string>
+          <Vector3 name="size">
+            <X>0.4899999499320984</X>
+            <Y>0.30000001192092896</Y>
+            <Z>0.10000038146972656</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-0.9099991917610168</X>
+            <Y>0.4799995422363281</Y>
+            <Z>7.559999465942383</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>5.960464477539063e-08</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.7254902124404907</R>
+            <G>0.843137264251709</G>
+            <B>0.8823529481887817</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://77638834641707</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX102">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX101</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX103">
+        <Properties>
+          <string name="Name">ReverseLight_R</string>
+          <Vector3 name="size">
+            <X>0.4899999499320984</X>
+            <Y>0.30000001192092896</Y>
+            <Z>0.10000038146972656</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>0.9100006222724915</X>
+            <Y>0.4799995422363281</Y>
+            <Z>7.559999465942383</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>-5.960464477539063e-08</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.7254902124404907</R>
+            <G>0.843137264251709</G>
+            <B>0.8823529481887817</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://115115326967944</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX104">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX103</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX105">
+        <Properties>
+          <string name="Name">RoofPanel</string>
+          <Vector3 name="size">
+            <X>5.179999828338623</X>
+            <Y>0.2673451900482178</Y>
+            <Z>3.9000000953674316</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>6.556707887739321e-08</X>
+            <Y>2.4063267707824707</Y>
+            <Z>0.75</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>-2.406327247619629</Y>
+            <Z>0.7499995827674866</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://130160274149853</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX106">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX105</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX107">
+        <Properties>
+          <string name="Name">SeatBack_Driver</string>
+          <Vector3 name="size">
+            <X>1.4500001668930054</X>
+            <Y>1.6359224319458008</Y>
+            <Z>0.630084753036499</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>1.4500001668930054</X>
+            <Y>0.8699994087219238</Y>
+            <Z>1.4999998807907104</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.10980392247438431</R>
+            <G>0.13333334028720856</G>
+            <B>0.14509804546833038</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://75601253206912</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX108">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX107</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX109">
+        <Properties>
+          <string name="Name">SeatBack_Passenger</string>
+          <Vector3 name="size">
+            <X>1.4500001668930054</X>
+            <Y>1.6359224319458008</Y>
+            <Z>0.630084753036499</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-1.4499999284744263</X>
+            <Y>0.8699994087219238</Y>
+            <Z>1.5000001192092896</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.10980392247438431</R>
+            <G>0.13333334028720856</G>
+            <B>0.14509804546833038</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://74106500801961</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX110">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX109</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX111">
+        <Properties>
+          <string name="Name">SeatBase_Driver</string>
+          <Vector3 name="size">
+            <X>1.4600000381469727</X>
+            <Y>0.45000016689300537</Y>
+            <Z>1.5</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>1.4500001668930054</X>
+            <Y>0.11999988555908203</Y>
+            <Z>0.7999991178512573</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.10980392247438431</R>
+            <G>0.13333334028720856</G>
+            <B>0.14509804546833038</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://94030417651123</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX112">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX111</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX113">
+        <Properties>
+          <string name="Name">SeatBase_Passenger</string>
+          <Vector3 name="size">
+            <X>1.4600000381469727</X>
+            <Y>0.45000016689300537</Y>
+            <Z>1.5</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-1.4499999284744263</X>
+            <Y>0.11999988555908203</Y>
+            <Z>0.7999993562698364</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.10980392247438431</R>
+            <G>0.13333334028720856</G>
+            <B>0.14509804546833038</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://134151144824630</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX114">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX113</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX115">
+        <Properties>
+          <string name="Name">SideGlass_L</string>
+          <Vector3 name="size">
+            <X>0.7297995090484619</X>
+            <Y>1.190721035003662</Y>
+            <Z>5.437944412231445</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-2.8650765419006348</X>
+            <Y>1.6472716331481934</Y>
+            <Z>0.1261599212884903</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>-2.8650765419006348</X>
+            <Y>-1.6472718715667725</Y>
+            <Z>0.1261591911315918</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0.25</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.13725490868091583</R>
+            <G>0.2549019753932953</G>
+            <B>0.2980392277240753</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://123409045808598</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX116">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX115</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX117">
+        <Properties>
+          <string name="Name">SideGlass_R</string>
+          <Vector3 name="size">
+            <X>0.729799747467041</X>
+            <Y>1.190721035003662</Y>
+            <Z>5.437944412231445</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>2.8650765419006348</X>
+            <Y>1.6472716331481934</Y>
+            <Z>0.1261594146490097</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>2.8650765419006348</X>
+            <Y>-1.6472718715667725</Y>
+            <Z>0.1261591911315918</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0.25</float>
+          <token name="Material">1568</token>
+          <Color3 name="Color">
+            <R>0.13725490868091583</R>
+            <G>0.2549019753932953</G>
+            <B>0.2980392277240753</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://90664012332095</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX118">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX117</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX119">
+        <Properties>
+          <string name="Name">Sill_L</string>
+          <Vector3 name="size">
+            <X>0.17999982833862305</X>
+            <Y>0.22000086307525635</Y>
+            <Z>5.349999904632568</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>-3.369999885559082</X>
+            <Y>-0.7899999618530273</Y>
+            <Z>2.946147503735119e-07</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://106200804724312</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX120">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX119</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX121">
+        <Properties>
+          <string name="Name">Sill_R</string>
+          <Vector3 name="size">
+            <X>0.17999982833862305</X>
+            <Y>0.22000086307525635</Y>
+            <Z>5.349999904632568</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>3.369999885559082</X>
+            <Y>-0.7899999618530273</Y>
+            <Z>-2.946147503735119e-07</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.07058823853731155</R>
+            <G>0.0941176488995552</G>
+            <B>0.11372549086809158</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://99603661628733</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX122">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX121</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX123">
+        <Properties>
+          <string name="Name">TrunkPanel</string>
+          <Vector3 name="size">
+            <X>6.239782333374023</X>
+            <Y>0.1886965036392212</Y>
+            <Z>2.760000228881836</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>4.808252924703993e-07</X>
+            <Y>0.9850010871887207</Y>
+            <Z>5.5</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>-0.9850009083747864</Y>
+            <Z>5.5</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://137319568784546</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX124">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX123</Ref>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="MeshPart" referent="RBX125">
+        <Properties>
+          <string name="Name">BodyShell</string>
+          <Vector3 name="size">
+            <X>7</X>
+            <Y>2.050001859664917</Y>
+            <Z>15</Z>
+          </Vector3>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.02499997615814209</Y>
+            <Z>0</Z>
+            <R00>-1</R00>
+            <R01>0</R01>
+            <R02>-8.742277657347586e-08</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>8.742277657347586e-08</R20>
+            <R21>0</R21>
+            <R22>-1</R22>
+          </CoordinateFrame>
+          <CoordinateFrame name="PivotOffset">
+            <X>0</X>
+            <Y>-0.02499997615814209</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>-1.9952032520196306e-23</R01>
+            <R02>-2.4492937051703357e-16</R02>
+            <R10>-2.4492937051703357e-16</R10>
+            <R11>-1.6292068494294654e-07</R11>
+            <R12>-1</R12>
+            <R20>-1.9952029364752685e-23</R20>
+            <R21>1</R21>
+            <R22>-1.6292068494294654e-07</R22>
+          </CoordinateFrame>
+          <float name="Transparency">0</float>
+          <token name="Material">272</token>
+          <Color3 name="Color">
+            <R>0.11764705926179886</R>
+            <G>0.43529412150382996</G>
+            <B>0.4627451002597809</B>
+          </Color3>
+          <bool name="Anchored">true</bool>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshId">
+            <url>rbxassetid://126237136650051</url>
+          </Content>
+          <Content name="TextureID">
+            <null />
+          </Content>
+        </Properties>
+        <Item class="WeldConstraint" referent="RBX126">
+          <Properties>
+            <string name="Name">VisualWeld</string>
+            <Ref name="Part0">RBX127</Ref>
+            <Ref name="Part1">RBX125</Ref>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX127">
+      <Properties>
+        <string name="Name">Chassis</string>
+        <Vector3 name="size">
+          <X>6.400000095367432</X>
+          <Y>1.600000023841858</Y>
+          <Z>14</Z>
+        </Vector3>
+        <CoordinateFrame name="CFrame">
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <CoordinateFrame name="PivotOffset">
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <float name="Transparency">1</float>
+        <token name="Material">256</token>
+        <Color3 name="Color">
+          <R>0.6392157077789307</R>
+          <G>0.6352941393852234</G>
+          <B>0.6470588445663452</B>
+        </Color3>
+        <bool name="Anchored">true</bool>
+        <bool name="CanCollide">true</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CanTouch">true</bool>
+        <bool name="Massless">false</bool>
+      </Properties>
+      <Item class="Attachment" referent="RBX128">
+        <Properties>
+          <string name="Name">ExhaustAudio</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.5</Y>
+            <Z>7.300000190734863</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX129">
+        <Properties>
+          <string name="Name">GearLeverPivot</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.4000000059604645</Y>
+            <Z>-0.5199999809265137</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX130">
+        <Properties>
+          <string name="Name">SteeringPivot</string>
+          <CoordinateFrame name="CFrame">
+            <X>1.4500000476837158</X>
+            <Y>1.2000000476837158</Y>
+            <Z>-1.2599999904632568</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX131">
+        <Properties>
+          <string name="Name">Suspension_FL</string>
+          <CoordinateFrame name="CFrame">
+            <X>-2.9000000953674316</X>
+            <Y>-0.6000000238418579</Y>
+            <Z>-4.699999809265137</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX132">
+        <Properties>
+          <string name="Name">EngineAudio</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.4000000059604645</Y>
+            <Z>-4</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX133">
+        <Properties>
+          <string name="Name">Suspension_RL</string>
+          <CoordinateFrame name="CFrame">
+            <X>-2.9000000953674316</X>
+            <Y>-0.6000000238418579</Y>
+            <Z>4.5</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX134">
+        <Properties>
+          <string name="Name">Pedal_Clutch</string>
+          <CoordinateFrame name="CFrame">
+            <X>0.9399999976158142</X>
+            <Y>0.3199999928474426</Y>
+            <Z>-2.3499999046325684</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX135">
+        <Properties>
+          <string name="Name">Pedal_Brake</string>
+          <CoordinateFrame name="CFrame">
+            <X>1.350000023841858</X>
+            <Y>0.3199999928474426</Y>
+            <Z>-2.3499999046325684</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX136">
+        <Properties>
+          <string name="Name">Suspension_RR</string>
+          <CoordinateFrame name="CFrame">
+            <X>2.9000000953674316</X>
+            <Y>-0.6000000238418579</Y>
+            <Z>4.5</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX137">
+        <Properties>
+          <string name="Name">Pedal_Throttle</string>
+          <CoordinateFrame name="CFrame">
+            <X>1.7599999904632568</X>
+            <Y>0.3199999928474426</Y>
+            <Z>-2.3499999046325684</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX138">
+        <Properties>
+          <string name="Name">Suspension_FR</string>
+          <CoordinateFrame name="CFrame">
+            <X>2.9000000953674316</X>
+            <Y>-0.6000000238418579</Y>
+            <Z>-4.699999809265137</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX139">
+        <Properties>
+          <string name="Name">DriverSeat</string>
+          <CoordinateFrame name="CFrame">
+            <X>1.4500000476837158</X>
+            <Y>0.6499999761581421</Y>
+            <Z>0.800000011920929</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX140">
+        <Properties>
+          <string name="Name">CameraTarget</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>1.2999999523162842</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX141">
+        <Properties>
+          <string name="Name">HandbrakePivot</string>
+          <CoordinateFrame name="CFrame">
+            <X>0.33000001311302185</X>
+            <Y>0.550000011920929</Y>
+            <Z>0.6200000047683716</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+</roblox>

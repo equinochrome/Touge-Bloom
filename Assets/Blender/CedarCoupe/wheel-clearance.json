@@ -1,0 +1,5 @@
+{
+  "checks": 84,
+  "body_surface_intersections": [],
+  "scope": "Tire triangle surface against body shell; excludes containment, other panels and road/chassis collision"
+}

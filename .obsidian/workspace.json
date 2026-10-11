@@ -1,0 +1,237 @@
+{
+  "main": {
+    "id": "321b979a9e148899",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d0c63524d363d89",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "17513b626727002f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/T1-QA.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "T1-QA"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8b329aebaff93a13",
+    "type": "split",
+    "children": [
+      {
+        "id": "72c7225a0a247cb5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "47a4919fe9eb7209",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "cbbae278ca658a0d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d6d3295509be69b5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "32a1af3a51f04daf",
+    "type": "split",
+    "children": [
+      {
+        "id": "39ae8d1656ca8a4e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e65d2ccfbbd16a2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/T1-QA.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b16dcaee4b19f93e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/T1-QA.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "de0f5cfc853b739a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "bbe59859601c90f2",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "14f2495560d97dc8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/T1-QA.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "17513b626727002f",
+  "lastOpenFiles": [
+    "CLAUDE_HANDOFF.md",
+    "coordination/state/mutation.lock",
+    "AGENTS.md",
+    "Assets/Blender/CedarCoupe/CedarCoupePrototype.rbxm",
+    "Design/Cedar Coupe Mechanics Handoff.md",
+    "Assets/Blender/CedarCoupe/check_car_clearance.py",
+    "Assets/Blender/CedarCoupe/prototype_coupe.py",
+    "Assets/Blender/CedarCoupe/assemble_cedar.luau",
+    "Assets/Blender/CedarCoupe/studio-assembly.json",
+    "Assets/Blender/CedarCoupe/CedarCoupePrototype.rbxmx",
+    "Assets/Blender/CedarCoupe/Cedar_Coupe_Prototype.blend@",
+    "Assets/Blender/CedarCoupe/Cedar_Coupe_BodyShell_R2.mtl",
+    "Assets/Blender/CedarCoupe/Cedar_Coupe_BodyShell_R2.obj",
+    "Assets/Blender/CedarCoupe/side.png",
+    "Assets/Blender/CedarCoupe/rear-three-quarter.png",
+    "Assets/Blender/CedarCoupe/front-three-quarter.png",
+    "docs/PHASE0.md",
+    "Assets/Blender/Batch01/README.md",
+    "Assets/Blender/Batch01/blender-review.png",
+    "Untitled.canvas",
+    "Design/Japanese Circuit Generation Brief.md",
+    "Design/References/Japanese Circuit Reference Board.md",
+    "Design/References/Attachments/Circuits/Minami Chiba 2018 layout.jpg",
+    "Design/References/Attachments/Circuits/Nikko corner photo.webp",
+    "Design/References/Attachments/Circuits/Ebisu West photo.jpg",
+    "Design/References/Attachments/Circuits/Nikko organizer layout.webp",
+    "Design/References/Attachments/Circuits/Ebisu North photo.jpg",
+    "Design/References/Attachments/Circuits/Meihan C 2025 photo.jpg",
+    "Design/2026-10-10.md",
+    "Design/Project Management.md",
+    "Design/Visual Direction.md",
+    "docs/T1-QA.md",
+    "Design/Blender Asset Review 01.md",
+    "Design/Asset Register.md",
+    "CLAUDE.md",
+    "Assets/README.md",
+    "Design/References/Modeling Detail Board.md",
+    "Design/Asset Contract.md",
+    "START HERE.md",
+    "README.md",
+    "Design/Claude Brief.md",
+    "Design/Cars and Upgrades.md",
+    "Design/References/Japanese Mountain Reference Board.md"
+  ]
+}

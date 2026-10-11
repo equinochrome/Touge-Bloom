@@ -1,0 +1,10 @@
+newmtl paint
+Kd 0.78 0.79 0.75
+Ks 0.25 0.25 0.25
+Ns 35
+map_Kd rail_paint_color.png
+
+newmtl steel
+Kd 0.31 0.34 0.36
+Ks 0.7 0.7 0.7
+Ns 80
